@@ -1,0 +1,26 @@
+@import 'mixins';
+
+@include reset(); // Сброс стилей
+
+@import 'mixingrid';
+
+// Шрифты
+@include font-face("Ptrootui", "../fonts/Ptrootui/Ptrootui", normal, normal);
+@include font-face("Ptrootui", "../fonts/Ptrootui/Ptrootuimedium", 500, normal);
+@include font-face("Ptrootui", "../fonts/Ptrootui/Ptrootuibold", bold, normal);
+
+@include font-face("Benzin", "../fonts/Benzin/benzinbold", bold, normal);
+
+@include font-face("Montserrat", "../fonts/Montserrat/montserrat-v23-latin_cyrillic-500", 500, normal);
+
+// Цвета
+// $black: #000;
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/menu';
+// @import 'blocks/accordion';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';
