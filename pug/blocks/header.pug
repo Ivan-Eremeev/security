@@ -1,34 +1,97 @@
 // header
 header.header#header
 	.wrapper
-		.header_container
 
-			// menu
-			//- .menu--left .menu--right
-			.js-menu.menu.menu--right
-				#menu-btn.menu__btn.hamburger.hamburger--squeeze
-					.hamburger-box
-						.hamburger-inner
-				nav.menu__nav
-					ul.menu__list
-						li
-							a(href="#") Меню 1
-						li
-							a(href="#") Меню 2
-						li
-							a(href="#") Меню 3
-						li
-							a(href="#") Меню 4
-						li
-							a(href="#") Меню 5
-						li
-							a(href="#") Меню 6
-						li
-							a(href="#") Меню 7
-						li
-							a(href="#") Меню 8
-					#menu-close.menu__close
-				#menu-over.menu__over
-			// /menu
+		.header__top 
+
+			.header__left
+				a(href="#").header__logo 
+					img(src="img/logo.svg", alt="")
+				a(href="tel:+74951281193").header__tel +7 (495) 128-11-93
+
+			.header__menu 
+				ul
+					li 
+						a(href="#") Акции
+					li 
+						a(href="#") Доставка
+					li 
+						a(href="#") Как купить
+					li 
+						a(href="#") Услуги
+					li 
+						a(href="#") О компании
+					li 
+						a(href="#") Контакты
+
+		.header__bottom 
+
+			.btn.btn--blue.btn--catalog
+				svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(d="M2 5H18" stroke-width="2" stroke-linecap="round")
+					path(d="M2 10L18 10" stroke-width="2" stroke-linecap="round")
+					path(d="M2 15L10 15" stroke-width="2" stroke-linecap="round")
+				span Каталог товаров
+
+			.hamburger.hamburger--squeeze
+				.hamburger-box
+					.hamburger-inner
+
+			a(href="#").header__logo-mob 
+				img(src="img/logo.svg", alt="")
+
+			form(action="#").header__search 
+				.input 
+					input(type="text" placeholder="Поиск в магазине") 
+				button(type="submit").header__search-btn 
+					svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+						path(fill-rule="evenodd" clip-rule="evenodd" d="M15.6 14.3L10.8 9.5C11.5 8.5 11.9 7.3 11.9 6C11.9 2.7 9.2 0 5.9 0C2.6 0 0 2.7 0 6C0 9.3 2.7 12 6 12C7.3 12 8.5 11.6 9.5 10.9L14.3 15.7C14.5 15.9 14.7 16 15 16C15.3 16 15.5 15.9 15.7 15.7C16 15.3 16 14.7 15.6 14.3ZM6 10C3.8 10 2 8.2 2 6C2 3.8 3.8 2 6 2C8.2 2 10 3.8 10 6C9.9 8.2 8.2 10 6 10Z")
+
+			.header__user-menu 
+				ul 
+					li 
+						a(href="#") 
+							img(src="img/profile.svg", alt="")
+							span Войти
+					li 
+						a(href="#") 
+							img(src="img/favorite.svg", alt="")
+							span Избранное
+					li 
+						a(href="#") 
+							img(src="img/compare.svg", alt="")
+							span Сравнение
+					li 
+						a(href="#") 
+							img(src="img/cart.svg", alt="")
+							span Корзина
+
+			//- // menu
+			//- //- .menu--left .menu--right
+			//- .js-menu.menu.menu--right
+			//- 	#menu-btn.menu__btn.hamburger.hamburger--squeeze
+			//- 		.hamburger-box
+			//- 			.hamburger-inner
+			//- 	nav.menu__nav
+			//- 		ul.menu__list
+			//- 			li
+			//- 				a(href="#") Меню 1
+			//- 			li
+			//- 				a(href="#") Меню 2
+			//- 			li
+			//- 				a(href="#") Меню 3
+			//- 			li
+			//- 				a(href="#") Меню 4
+			//- 			li
+			//- 				a(href="#") Меню 5
+			//- 			li
+			//- 				a(href="#") Меню 6
+			//- 			li
+			//- 				a(href="#") Меню 7
+			//- 			li
+			//- 				a(href="#") Меню 8
+			//- 		#menu-close.menu__close
+			//- 	#menu-over.menu__over
+			//- // /menu
 
 // /header

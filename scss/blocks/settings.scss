@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 a {
-  transition: .3s;
+  transition: .2s;
   text-decoration: none;
 }
 button,
@@ -65,7 +65,7 @@ body {
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
 }
 *::placeholder {
-  color: #a9a9a9;
+  color: $gray;
   opacity: 1;
 }
 .page {
