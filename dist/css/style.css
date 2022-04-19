@@ -458,10 +458,10 @@ body.lock {
   .header__user-menu ul {
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin-left: -10px;
+    margin-left: 0;
   }
   .header__user-menu ul li {
-    margin-left: 10px;
+    margin-left: 0;
   }
   .header__user-menu ul li a {
     -webkit-box-orient: vertical;
