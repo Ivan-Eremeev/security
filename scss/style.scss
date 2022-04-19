@@ -14,7 +14,9 @@
 @include font-face("Montserrat", "../fonts/Montserrat/montserrat-v23-latin_cyrillic-500", 500, normal);
 
 // Цвета
-// $black: #000;
+$black: #22262D;
+$gray: #A5A5AD;
+$blue: #3460B4;
 
 // Подключение файлов
 @import 'blocks/settings';
