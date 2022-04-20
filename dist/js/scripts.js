@@ -8,7 +8,7 @@ $(document).ready(function () {
 	// Брэйкпоинты js
 	var	breakXl = 1400,
 			breakLg = 1200,
-			breakMd = 1025,
+			breakMd = 1050,
 			breakSm = 769,
 			breakXs = 500;
 	
@@ -659,34 +659,34 @@ $(document).ready(function () {
 	// }
 	// hideListItems();
 
-	// // Выпадайки при клике по кнопке
-	// // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
-	// // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
-	// function dropBlock(btn) {
-	// 	var $this = undefined,
-	// 			drop = undefined,
-	// 			close = $('.js-drop-close');
-	// 	btn.on('click', function () {
-	// 		$this = $(this);
-	// 		drop = $('#' + $this.data('drop'));
-	// 		$this.toggleClass('is-active');
-	// 		drop.toggleClass('open');
-	// 		$(document).mouseup(function (e) {
-	// 			if (!$this.is(e.target)
-	// 				&& $this.has(e.target).length === 0
-	// 				&& !drop.is(e.target)
-	// 				&& drop.has(e.target).length === 0) {
-	// 				$this.removeClass('is-active');
-	// 				drop.removeClass('open');
-	// 			}
-	// 		});
-	// 	})
-	// 	close.on('click', function () {
-	// 		$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
-	// 		$('#' + $(this).data('drop')).removeClass('open');
-	// 	})
-	// }
-	// dropBlock($('.js-drop-btn'));
+	// Выпадайки при клике по кнопке
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlock(btn) {
+		var $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('is-active');
+			drop.toggleClass('open');
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('is-active');
+					drop.removeClass('open');
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+			$('#' + $(this).data('drop')).removeClass('open');
+		})
+	}
+	dropBlock($('.js-drop-btn'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {
@@ -736,5 +736,56 @@ $(document).ready(function () {
 
 	// }
 	// replace($('#block'), $('#to'), $('#from'), breakLg);
+
+	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+	function stikyMenu() {
+		const header = document.querySelector('#header');
+		const content = document.querySelector('.content');
+		let width = window.clientWidth;
+
+		if (header) {
+			setPaddingTopFromHeader();
+
+			setNavbarPosition();
+
+			window.addEventListener('scroll', () => {
+				setNavbarPosition();
+			});
+		}
+
+		function setNavbarPosition() {
+
+			if (window.scrollY > header.clientTop + 300) {
+				header.classList.add('stiky');
+			} else if (window.scrollY <= header.clientTop + 1) {
+				header.classList.remove('stiky');
+			}
+
+		}
+
+		function setPaddingTopFromHeader() {
+			setTimeout(() => {
+				content.setAttribute('style', `padding-top:${header.clientHeight
+					}px;`);
+			}, 500);
+		}
+
+	}
+	stikyMenu();
+
+	// Показывать подменю в каталоге при наведении на пункты меню
+	function showSubmenuByHover() {
+		var menuItem = $('[data-catalog-item]');
+		var menuSubmenu = $('[data-catalog-submenu]');
+		menuItem.on('mouseover', function () {
+			var data = $(this).data('catalog-item');
+			var submenu = $('[data-catalog-submenu="' + data + '"]');
+			menuSubmenu.removeClass('open');
+			submenu.addClass('open');
+			menuItem.removeClass('active');
+			$(this).addClass('active');
+		})
+	}
+	showSubmenuByHover();
 
 });

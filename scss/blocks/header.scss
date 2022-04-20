@@ -1,7 +1,11 @@
 .header {
+  width: 100%;
   padding: 14px 0 19px;
   background: #FFFFFF;
   box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.08);
+  position: absolute;
+  top: 0;
+  left: 0;
   &__top {
     display: flex;
     justify-content: space-between;
@@ -165,5 +169,28 @@
     &__logo-mob {
       width: 170px;
     }
+  }
+}
+
+// stiky menu
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+  &.stiky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
   }
 }
