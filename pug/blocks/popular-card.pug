@@ -1,0 +1,10 @@
+mixin popular-card(img, title)
+  // popular-card
+  a(href="#").popular-card
+    .popular-card__img 
+      img(src= img, alt="")
+    .popular-card__title!= title
+      <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.7 2.884H8.372L5.488 0H7.112L10.612 3.5L7.112 7H5.516L8.386 4.13H0.7V2.884Z"/>
+      </svg>
+  //	/popular-card

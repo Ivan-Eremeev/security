@@ -54,6 +54,10 @@
   }
   .btn--catalog {
     flex-shrink: 0;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.2);
+    }
   }
   &__search {
     flex-grow: 1;
@@ -62,6 +66,10 @@
     input {
       padding: 0 50px 0 20px;
       font-weight: 500;
+      transition: 0.3s;
+      &:hover, &:focus {
+        box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
+      }
     }
   }
   &__search-btn {
@@ -112,6 +120,18 @@
     .hamburger {
       display: none;
     }
+    &#header {
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+      &.stiky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: showStyky 0.5s;
+      }
+    }
   }
   @media (max-width: $break_md) {
     padding: 10px 0;
@@ -122,11 +142,13 @@
     &__user-menu {
       width: 100%;
       padding: 20px 30px;
+      background-color: #fff;
       box-shadow: 0px -3px 20px rgba(0, 5, 115, 0.08);
       font-size: 12px;
       position: fixed;
       left: 0;
       bottom: 0;
+      z-index: 9;
       ul {
         justify-content: space-around;
         margin-left: 0;
@@ -152,7 +174,15 @@
       flex-grow: 0;
       margin: 0;
       .input {
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
         display: none;
+        &.open {
+          display: block;
+        }
       }
     }
     &__search-btn {
@@ -180,17 +210,5 @@
 
   to {
     transform: translateY(0)
-  }
-}
-#header {
-  position: absolute;
-  width: 100%;
-  z-index: 20;
-  &.stiky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    animation: showStyky 0.5s;
   }
 }

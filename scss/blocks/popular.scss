@@ -1,0 +1,22 @@
+.popular {
+  padding: 37px 0;
+  .title {
+    margin-bottom: 19px;
+  }
+  &__col {
+    @include col(2);
+    @include col-lg(3);
+    @include col-sm(4);
+    @include col-xs(6);
+  }
+  @media (max-width: $break_xs) {
+    .row {
+      margin-top: -10px;
+      margin-left: -10px;
+      > * {
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+}

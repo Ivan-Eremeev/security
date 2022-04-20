@@ -666,7 +666,8 @@ $(document).ready(function () {
 		var $this = undefined,
 				drop = undefined,
 				close = $('.js-drop-close');
-		btn.on('click', function () {
+		btn.on('click', function (e) {
+			e.preventDefault();
 			$this = $(this);
 			drop = $('#' + $this.data('drop'));
 			$this.toggleClass('is-active');
@@ -687,6 +688,31 @@ $(document).ready(function () {
 		})
 	}
 	dropBlock($('.js-drop-btn'));
+
+	// Появление поиска на мобилке
+	function dropSearch(btn) {
+		var $this = undefined,
+			drop = undefined;
+		btn.on('click', function (e) {
+			if ($(window).width() <= breakMd) {
+				e.preventDefault();
+				$this = $(this);
+				drop = $('#' + $this.data('drop'));
+				$this.toggleClass('is-active');
+				drop.toggleClass('open');
+				$(document).mouseup(function (e) {
+					if (!$this.is(e.target)
+						&& $this.has(e.target).length === 0
+						&& !drop.is(e.target)
+						&& drop.has(e.target).length === 0) {
+						$this.removeClass('is-active');
+						drop.removeClass('open');
+					}
+				});
+			}
+		})
+	}
+	dropSearch($('.js-search-btn'));
 
 	// // JQuery Slider // Ползунок
 	// function JQuerySlider() {

@@ -76,4 +76,14 @@ body {
 .content {
   flex-grow: 1;
 }
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.row.gy {
+  margin-top: $gutter * -1;
+  > * {
+    padding-top: $gutter;
+  }
+}
 /* /settings */

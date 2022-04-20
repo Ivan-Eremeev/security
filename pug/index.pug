@@ -1,9 +1,12 @@
 extends blocks/base.pug
 
+include blocks/popular-card.pug
+
 block title 
 	title Главная
 
 block content
+
 
 	.page
 
@@ -11,6 +14,35 @@ block content
 		
 		.content
 
-      
+			// popular
+			.popular
+				.wrapper 
+					.title Популярные категории
+					.row.gy
+						.popular__col 
+							+popular-card('img/product_2.jpg', 'Видеонаблюдение')
+						.popular__col 
+							+popular-card('img/product_3.jpg', 'СКУД')
+						.popular__col 
+							+popular-card('img/product_4.jpg', 'Средства <br>пожаротушения')
+						.popular__col 
+							+popular-card('img/product_5.jpg', 'Домофоны')
+						.popular__col 
+							+popular-card('img/product_6.jpg', 'Провода')
+						.popular__col 
+							+popular-card('img/product_7.jpg', 'ОПС')
+						.popular__col 
+							+popular-card('img/product_8.jpg', 'Взрывозащищенное оборудование')
+						.popular__col 
+							+popular-card('img/product_9.jpg', 'Системы оповещения')
+						.popular__col 
+							+popular-card('img/product_10.jpg', 'Источники питания')
+						.popular__col 
+							+popular-card('img/product_11.jpg', 'Монтажные и расходные материалы')
+						.popular__col 
+							+popular-card('img/product_12.jpg', 'Шкафы, стойки и компоненты СКС')
+						.popular__col 
+							+popular-card('img/product_13.jpg', 'Сетевое оборудование')
+			//	/popular
 			
 		include blocks/footer.pug

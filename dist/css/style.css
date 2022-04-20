@@ -172,13 +172,13 @@ body.lock {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -15px;
+  margin-left: -30px;
 }
 .row > * {
   word-wrap: break-word;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
 .wrapper {
@@ -244,6 +244,18 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.row.gy {
+  margin-top: -30px;
+}
+.row.gy > * {
+  padding-top: 30px;
 }
 
 /* /settings */
@@ -367,6 +379,13 @@ body.lock {
 .header .btn--catalog {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header .btn--catalog:hover {
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.2);
+  box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.2);
 }
 .header__search {
   -webkit-box-flex: 1;
@@ -378,6 +397,13 @@ body.lock {
 .header__search input {
   padding: 0 50px 0 20px;
   font-weight: 500;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header__search input:hover, .header__search input:focus {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
+  box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
 }
 .header__search-btn {
   width: 34px;
@@ -439,6 +465,19 @@ body.lock {
   .header .hamburger {
     display: none;
   }
+  .header#header {
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+  }
+  .header#header.stiky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-animation: showStyky 0.5s;
+    animation: showStyky 0.5s;
+  }
 }
 @media (max-width: 1050px) {
   .header {
@@ -452,12 +491,14 @@ body.lock {
   .header__user-menu {
     width: 100%;
     padding: 20px 30px;
+    background-color: #fff;
     -webkit-box-shadow: 0px -3px 20px rgba(0, 5, 115, 0.08);
     box-shadow: 0px -3px 20px rgba(0, 5, 115, 0.08);
     font-size: 12px;
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 9;
   }
   .header__user-menu ul {
     -ms-flex-pack: distribute;
@@ -492,7 +533,17 @@ body.lock {
     margin: 0;
   }
   .header__search .input {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
     display: none;
+  }
+  .header__search .input.open {
+    display: block;
   }
   .header__search-btn {
     background-color: transparent;
@@ -533,20 +584,6 @@ body.lock {
     transform: translateY(0);
   }
 }
-#header {
-  position: absolute;
-  width: 100%;
-  z-index: 20;
-}
-#header.stiky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-animation: showStyky 0.5s;
-  animation: showStyky 0.5s;
-}
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -1061,4 +1098,88 @@ body.lock {
 }
 .product-card__sticker span {
   font-size: 24px;
+}
+
+.popular {
+  padding: 37px 0;
+}
+.popular .title {
+  margin-bottom: 19px;
+}
+.popular__col {
+  width: 16.6666666667%;
+}
+@media screen and (max-width: 1200px) {
+  .popular__col {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .popular__col {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .popular__col {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .popular .row {
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+  .popular .row > * {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+.popular-card {
+  display: block;
+  padding: 10px 20px 20px;
+  height: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+  box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+  border-radius: 15px;
+  color: #22262D;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.popular-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.popular-card__img img {
+  max-height: 100%;
+}
+.popular-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.popular-card__title svg {
+  fill: #22262D;
+  margin-left: 5px;
+}
+.popular-card:hover {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
+  box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
+}
+.popular-card:hover .popular-card__title {
+  color: #3460B4;
+}
+.popular-card:hover .popular-card__title svg {
+  fill: #3460B4;
 }
