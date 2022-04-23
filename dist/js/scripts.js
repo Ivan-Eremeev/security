@@ -814,4 +814,16 @@ $(document).ready(function () {
 	}
 	showSubmenuByHover();
 
+	// Swiper
+	const bannerSlider = new Swiper('#bannerSlider', {
+		spaceBetween: 30,
+		loop: true,
+		autoplay: true,
+		speed: 1500,
+		pagination: {
+			el: '.banner__pagination',
+			clickable: true,
+		},
+	});
+
 });

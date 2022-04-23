@@ -19,4 +19,7 @@
   &--catalog {
     padding: 10px 36px 10px 30px;
   }
+  @media (max-width: $break_sm) {
+    padding: 8px 30px;
+  }
 }
