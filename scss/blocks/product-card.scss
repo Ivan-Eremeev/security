@@ -8,12 +8,7 @@
   color: $black;
   position: relative;
   transition: 0.5s;
-  &--shadow {
-    box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
-    &:hover {
-      box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
-    }
-  }
+  box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
   &__img {
     display: flex;
     justify-content: center;
@@ -60,7 +55,7 @@
     margin-left: 12px;
     border-radius: 100%;
     transition: 0.2s;
-    &--fill {
+    &--favorite {
       svg {
         fill: $gray;
         transition: 0.1s;
@@ -73,7 +68,7 @@
         }
       }
     }
-    &--stroke {
+    &--compare {
       svg {
         stroke: $gray;
         transition: 0.1s;
@@ -85,6 +80,16 @@
         svg {
           stroke: #fff;
         }
+      }
+    }
+    &--cart {
+      background-color: $blue;
+      transition: 0.1s;
+      svg {
+        fill: #fff;
+      }
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }
@@ -100,6 +105,11 @@
     font-weight: bold;
     span {
       font-size: 24px;
+    }
+  }
+  @media (min-width: $break_sm + 1) {
+    &:hover {
+      box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
     }
   }
 }

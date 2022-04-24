@@ -26,12 +26,15 @@
       margin-left: 5px;
     }
   }
-  &:hover {
-    box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
-    .popular-card__title {
-      color: $blue;
-      svg {
-        fill: $blue;
+  @media (min-width: $break_sm + 1) {
+    &:hover {
+      box-shadow: 0px 5px 20px rgba(0, 5, 115, 0.2);
+      .popular-card__title {
+        color: $blue;
+    
+        svg {
+          fill: $blue;
+        }
       }
     }
   }
