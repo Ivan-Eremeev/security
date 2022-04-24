@@ -806,6 +806,118 @@ body.lock {
   }
 }
 
+.footer__container {
+  padding: 50px 37px 48px 48px;
+  background-color: #F2F6FB;
+}
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+.footer__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 800px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: -20px;
+}
+.footer__list {
+  margin-left: 20px;
+}
+.footer__list p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.footer__list ul {
+  line-height: 32px;
+  font-size: 14px;
+}
+.footer__list ul li a {
+  color: #22262D;
+}
+.footer__list ul li a:hover {
+  color: #3460B4;
+}
+.footer__list--icons ul li {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding-left: 30px;
+  position: relative;
+}
+.footer__list--icons ul li img {
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+.footer__subscribe {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 320px;
+  margin-left: 20px;
+}
+.footer__subscribe-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.footer__subscribe-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  margin-right: 25px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+  box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+  border-radius: 15px;
+}
+.footer__subscribe-icon img {
+  width: 40%;
+}
+.footer__subscribe-input {
+  margin-bottom: 20px;
+}
+.footer__subscribe-input .input input {
+  height: 46px;
+}
+.footer__subscribe-btn .btn {
+  padding: 14px 30px;
+}
+.footer__copyright {
+  font-size: 14px;
+}
+@media (max-width: 1050px) {
+  .footer__container {
+    display: none;
+  }
+}
 @media (max-width: 1050px) {
   .footer {
     margin-bottom: 80px;
