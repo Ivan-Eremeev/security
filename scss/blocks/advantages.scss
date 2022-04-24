@@ -1,0 +1,49 @@
+.advantages {
+  margin-bottom: 60px;
+  &__col {
+    @include col(3);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  &__item {
+    max-width: 300px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    background-image: url(../img/advantages_icon_bg.jpg);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 23px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  &__text {
+    font-size: 15px;
+    color: $gray;
+    line-height: 1.5;
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: $break_xs) {
+    &__col {
+      display: flex;
+      justify-content: center;
+    }
+    &__item {
+      text-align: center;
+    }
+    &__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
