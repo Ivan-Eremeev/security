@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/libs/jquery.formstyler.css">
 		<link rel="stylesheet" href="css/libs/jquery.formstyler.theme.css">
@@ -396,42 +397,90 @@
 												<div class="filters__arrow"> </div>
 											</div>
 											<div class="accordion__content filters__content open" id="trigger_1">
-												<div class="filters__list">
-													<ul>
-														<li> 
-															<input id="filterType_0" type="radio" name="filterType">
-															<label for="filterType_0">Телекамеры купольные</label>
-														</li>
-														<li> 
-															<input id="filterType_1" type="radio" name="filterType" checked>
-															<label for="filterType_1">Телекамеры цилиндрические</label>
-														</li>
-														<li> 
-															<input id="filterType_2" type="radio" name="filterType">
-															<label for="filterType_2">Телекамеры корпусные</label>
-														</li>
-														<li> 
-															<input id="filterType_3" type="radio" name="filterType">
-															<label for="filterType_3">Телекамеры модульные</label>
-														</li>
-														<li> 
-															<input id="filterType_4" type="radio" name="filterType">
-															<label for="filterType_4">Телекамеры поворотные</label>
-														</li>
-														<li> 
-															<input id="filterType_5" type="radio" name="filterType">
-															<label for="filterType_5">Телекамеры миниатюрные</label>
-														</li>
-													</ul>
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__list">
+														<ul>
+															<li> 
+																<input id="filterType_0" type="radio" name="filterType">
+																<label for="filterType_0">Телекамеры купольные</label>
+															</li>
+															<li> 
+																<input id="filterType_1" type="radio" name="filterType" checked>
+																<label for="filterType_1">Телекамеры цилиндрические</label>
+															</li>
+															<li> 
+																<input id="filterType_2" type="radio" name="filterType">
+																<label for="filterType_2">Телекамеры корпусные</label>
+															</li>
+															<li> 
+																<input id="filterType_3" type="radio" name="filterType">
+																<label for="filterType_3">Телекамеры модульные</label>
+															</li>
+															<li> 
+																<input id="filterType_4" type="radio" name="filterType">
+																<label for="filterType_4">Телекамеры поворотные</label>
+															</li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="accordion__item filters__item">
-											<div class="accordion__trigger filters__trigger" data-trigger="trigger_2"> 
+											<div class="accordion__trigger filters__trigger active" data-trigger="trigger_2"> 
 												<div class="filters__title">Производители</div>
 												<div class="filters__arrow"> </div>
 											</div>
-											<div class="accordion__content filters__content" id="trigger_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+											<div class="accordion__content filters__content open" id="trigger_2">
+												<div class="input input--search"> 
+													<input type="text" placeholder="Найти производителя">
+												</div>
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist"> 
+														<ul> 
+															<li> 
+																<input id="brand_0" type="checkbox">
+																<label for="brand_0"><span> <span class="filters__checkbox"></span><span>Alteron</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="brand_1" type="checkbox">
+																<label for="brand_1"><span> <span class="filters__checkbox"></span><span>Beward</span></span><span>434</span></label>
+															</li>
+															<li> 
+																<input id="brand_2" type="checkbox">
+																<label for="brand_2"><span> <span class="filters__checkbox"></span><span>BOLID</span></span><span>52</span></label>
+															</li>
+															<li> 
+																<input id="brand_3" type="checkbox">
+																<label for="brand_3"><span> <span class="filters__checkbox"></span><span>ComOnyx</span></span><span>26</span></label>
+															</li>
+															<li> 
+																<input id="brand_4" type="checkbox">
+																<label for="brand_4"><span> <span class="filters__checkbox"></span><span>Dahua</span></span><span>2</span></label>
+															</li>
+															<li> 
+																<input id="brand_5" type="checkbox">
+																<label for="brand_5"><span> <span class="filters__checkbox"></span><span>Alteron</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="brand_6" type="checkbox">
+																<label for="brand_6"><span> <span class="filters__checkbox"></span><span>Beward</span></span><span>434</span></label>
+															</li>
+															<li> 
+																<input id="brand_7" type="checkbox">
+																<label for="brand_7"><span> <span class="filters__checkbox"></span><span>BOLID</span></span><span>52</span></label>
+															</li>
+															<li> 
+																<input id="brand_8" type="checkbox">
+																<label for="brand_8"><span> <span class="filters__checkbox"></span><span>ComOnyx</span></span><span>26</span></label>
+															</li>
+															<li> 
+																<input id="brand_9" type="checkbox">
+																<label for="brand_9"><span> <span class="filters__checkbox"></span><span>Dahua</span></span><span>2</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="accordion__item filters__item">
 											<div class="accordion__trigger filters__trigger" data-trigger="trigger_3"> 
@@ -1124,6 +1173,7 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/libs/swiper-bundle.min.js"> </script>
 		<script src="js/libs/jquery.formstyler.min.js"> </script>
 		<script src="js/scripts.js"></script>

@@ -913,4 +913,7 @@ $(document).ready(function () {
 		selectVisibleOptions: 10,
 	});
 
+	// JQueryScrollbar
+	$('.scrollbar-inner').scrollbar();
+
 });

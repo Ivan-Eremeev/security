@@ -53,36 +53,112 @@ block content
 
 										#trigger_1.accordion__content.filters__content.open
 											
-											.filters__list
-												ul
-													li 
-														input#filterType_0(type="radio" name="filterType")
-														label(for="filterType_0") Телекамеры купольные
-													li 
-														input#filterType_1(type="radio" name="filterType" checked)
-														label(for="filterType_1") Телекамеры цилиндрические
-													li 
-														input#filterType_2(type="radio" name="filterType")
-														label(for="filterType_2") Телекамеры корпусные
-													li 
-														input#filterType_3(type="radio" name="filterType")
-														label(for="filterType_3") Телекамеры модульные
-													li 
-														input#filterType_4(type="radio" name="filterType")
-														label(for="filterType_4") Телекамеры поворотные
-													li 
-														input#filterType_5(type="radio" name="filterType")
-														label(for="filterType_5") Телекамеры миниатюрные
+											.filters__scroll.scrollbar-inner
+
+												.filters__list
+													ul
+														li 
+															input#filterType_0(type="radio" name="filterType")
+															label(for="filterType_0") Телекамеры купольные
+														li 
+															input#filterType_1(type="radio" name="filterType" checked)
+															label(for="filterType_1") Телекамеры цилиндрические
+														li 
+															input#filterType_2(type="radio" name="filterType")
+															label(for="filterType_2") Телекамеры корпусные
+														li 
+															input#filterType_3(type="radio" name="filterType")
+															label(for="filterType_3") Телекамеры модульные
+														li 
+															input#filterType_4(type="radio" name="filterType")
+															label(for="filterType_4") Телекамеры поворотные
 
 									.accordion__item.filters__item
 
-										.accordion__trigger.filters__trigger(data-trigger="trigger_2") 
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_2") 
 											.filters__title Производители
 
 											.filters__arrow 
 
-										#trigger_2.accordion__content.filters__content
-											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+										#trigger_2.accordion__content.filters__content.open
+
+											.input.input--search 
+												input(type="text" placeholder="Найти производителя")
+											
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist 
+													ul 
+														li 
+															input#brand_0(type="checkbox")
+															label(for="brand_0")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_1(type="checkbox")
+															label(for="brand_1")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_2(type="checkbox")
+															label(for="brand_2")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_3(type="checkbox")
+															label(for="brand_3")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_4(type="checkbox")
+															label(for="brand_4")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
+														li 
+															input#brand_5(type="checkbox")
+															label(for="brand_5")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_6(type="checkbox")
+															label(for="brand_6")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_7(type="checkbox")
+															label(for="brand_7")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_8(type="checkbox")
+															label(for="brand_8")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_9(type="checkbox")
+															label(for="brand_9")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
 
 									.accordion__item.filters__item
 
