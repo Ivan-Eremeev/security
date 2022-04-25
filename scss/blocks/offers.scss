@@ -74,9 +74,8 @@
   }
   &__col {
     @include col(3);
-    @include col-md(4);
-    @include col-sm(6);
-    @include col-xs(12);
+    @include col-sm(4);
+    @include col-xs(6);
   }
   &__brand {
     display: flex;
@@ -103,22 +102,52 @@
       margin-bottom: 20px;
     }
   }
+  @media (max-width: $break_md) {
+    .row {
+      margin-top: -15px;
+      margin-left: -15px;
+      > * {
+        padding-top: 15px;
+        padding-left: 15px;
+      }
+    }
+    &__arrow {
+      width: 40px;
+      height: 40px;
+      &--prev {
+        left: -5px;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     margin-bottom: 30px;
     &--mb90 {
       margin-bottom: 40px;
     }
     &__arrow {
-      width: 40px;
-      height: 40px;
       &:after {
         font-size: 16px;
       }
       &--prev {
-        left: 20px;
+        left: 10px;
       }
       &--next {
         right: -10px;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    .row {
+      margin-top: -10px;
+      margin-left: -10px;
+      >* {
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+    }
+    &__arrow {
+      &--prev {
+        left: 5px;
       }
     }
   }

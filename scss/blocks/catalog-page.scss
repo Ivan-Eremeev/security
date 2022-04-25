@@ -1,0 +1,44 @@
+.catalog-page {
+  .title {
+    margin-bottom: 25px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__aside {
+    width: 280px;
+    flex-shrink: 0;
+  }
+  &__main {
+    margin-left: 47px;
+    flex-grow: 1;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  &__clear {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: normal;
+    color: $gray;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    svg {
+      margin-right: 7px;
+      fill: $gray;
+      transition: 0.3s;
+    }
+    &:hover {
+      color: $blue;
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+}

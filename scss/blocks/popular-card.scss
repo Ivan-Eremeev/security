@@ -38,4 +38,9 @@
       }
     }
   }
+  @media (max-width: $break_xs) {
+    &__img {
+      height: 100px;
+    }
+  }
 }

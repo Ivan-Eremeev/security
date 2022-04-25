@@ -40,4 +40,12 @@
     line-height: 1.7;
     margin-bottom: 16px;
   }
+  @media (max-width: $break_xs) {
+    &__title {
+      font-size: 16px;
+    }
+    &__date {
+      font-size: 12px;
+    }
+  }
 }

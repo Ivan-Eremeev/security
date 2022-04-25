@@ -860,7 +860,7 @@ $(document).ready(function () {
 			$this.parent().find(".swiper-button-prev").addClass("prev-" + index);
 			$this.parent().find(".swiper-button-next").addClass("next-" + index);
 			let offersSlider = new Swiper('.instance-' + index, {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 10,
 				navigation: {
 					prevEl: '.prev-' + index,
@@ -868,12 +868,12 @@ $(document).ready(function () {
 				},
 				breakpoints: {
 					500: {
-						slidesPerView: 2,
+						slidesPerView: 3,
 						spaceBetween: 10
 					},
-					769: {
-						slidesPerView: 3,
-						spaceBetween: 20
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 15
 					},
 					1050: {
 						slidesPerView: 4,

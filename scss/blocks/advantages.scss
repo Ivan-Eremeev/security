@@ -3,7 +3,6 @@
   &__col {
     @include col(3);
     @include col-sm(6);
-    @include col-xs(12);
   }
   &__item {
     max-width: 300px;
@@ -30,10 +29,13 @@
     color: $gray;
     line-height: 1.5;
   }
-  @media (max-width: $break_sm) {
-    margin-bottom: 30px;
-  }
   @media (max-width: $break_xs) {
+    .row {
+      margin-left: -10px;
+      > * {
+        padding-left: 10px;
+      }
+    }
     &__col {
       display: flex;
       justify-content: center;
@@ -42,8 +44,19 @@
       text-align: center;
     }
     &__icon {
+      width: 60px;
+      height: 60px;
+      padding: 15px;
+      margin-bottom: 10px;
       margin-left: auto;
       margin-right: auto;
+    }
+    &__title {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-size: 14px;
     }
   }
 }
