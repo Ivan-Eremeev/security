@@ -62,9 +62,8 @@
       }
       
       &:hover {
-        background-color: $blue;
         svg {
-          fill: #fff;
+          fill: $blue;
         }
       }
     }
@@ -75,10 +74,9 @@
       }
       
       &:hover {
-        background-color: $blue;
       
         svg {
-          stroke: #fff;
+          stroke: $blue;
         }
       }
     }

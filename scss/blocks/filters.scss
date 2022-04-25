@@ -1,0 +1,56 @@
+.filters {
+  &__item {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+    border-radius: 15px;
+    margin-bottom: 22px;
+  }
+  &__trigger {
+    position: relative;
+    &.active {
+      .filters__arrow {
+        transform: rotate(180deg);
+        opacity: 0.2;
+      }
+    }
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &__arrow {
+    width: 13px;
+    height: 9px;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.0313555 1.44343C0.0312385 1.66387 0.1157 1.88431 0.284388 2.05224L4.42715 6.16968C4.76132 6.50176 5.30079 6.50176 5.63507 6.16968L9.77772 2.05224C10.1136 1.71846 10.1154 1.17523 9.78195 0.838977C9.44836 0.502728 8.90568 0.500829 8.56979 0.834999L5.03105 4.35216L1.49243 0.835001C1.15654 0.500831 0.613742 0.50273 0.280266 0.838979C0.114217 1.00653 0.0313554 1.22508 0.0313555 1.44343Z' fill='%233460B4'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    position: absolute;
+    top: 6px;
+    right: 3px;
+    transition: 0.3s;
+  }
+  &__content {
+    padding-top: 15px;
+  }
+  &__list {
+    font-size: 14px;
+    ul {
+      margin-top: -14px;
+      li {
+        margin-top: 14px;
+        input {
+          display: none;
+          &:checked {
+            ~label {
+              color: $blue;
+            }
+          }
+        }
+        label {
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+    }
+  }
+}

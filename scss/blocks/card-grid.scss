@@ -5,6 +5,7 @@
   padding: 30px 15px 44px;
   background-color: #fff;
   color: $black;
+  position: relative;
   &__img {
     display: flex;
     justify-content: center;
@@ -82,20 +83,22 @@
     &--favorite {
       svg {
         fill: #C2D0E9;
+        transition: 0.1s;
       }
       &:hover {
         svg {
-          fill: #fff;
+          fill: $blue;
         }
       }
     }
     &--compare {
       svg {
         stroke: #C2D0E9;
+        transition: 0.1s;
       }
       &:hover {
         svg {
-          stroke: #fff;
+          stroke: $blue;
         }
       }
     }
@@ -111,9 +114,6 @@
       &:hover {
         transform: scale(1.05);
       }
-    }
-    &:hover {
-      background-color: $blue;
     }
   }
   @media (min-width: $break_sm + 1) {

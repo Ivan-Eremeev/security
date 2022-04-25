@@ -4,16 +4,34 @@
   align-items: center;
   padding: 10px 40px;
   border-radius: 6px;
+  border: 1px solid transparent;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   user-select: none;
+  transition: 0.3s;
   &--blue {
     background-color: $blue;
     color: #fff;
     svg {
       margin-right: 9px;
       stroke: #fff;
+    }
+  }
+  &--gray {
+    background-color: #fff;
+    border-color: #E1E4EF;
+    color: $gray;
+    &:hover {
+      color: $blue;
+    }
+  }
+  &--gray-blue {
+    background-color: #fff;
+    border-color: #E1E4EF;
+    color: $blue;
+    &:hover {
+      border-color: $blue;
     }
   }
   &--catalog {
