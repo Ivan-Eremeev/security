@@ -169,6 +169,8 @@
   }
   &__col-grid {
     @include col(3);
+    @include col-lg(4);
+    @include col-xs(6);
   }
   &__more {
     margin-bottom: 20px;
@@ -213,6 +215,88 @@
             svg {
               opacity: 0.2;
             }
+          }
+        }
+      }
+    }
+  }
+  &__filters-show {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: bold;
+    color: $blue;
+    cursor: pointer;
+    user-select: none;
+    svg {
+      margin-right: 9px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @media (min-width: $break_md + 1) {
+    &__filters-show {
+      display: none;
+    }
+  }
+  @media (max-width: $break_md) {
+    &__aside {
+      width: 300px;
+      padding: 20px 10px;
+      transition: 0.3s;
+      background-color: #fff;
+      box-shadow: 0px 3px 20px rgba(0, 5, 115, 0.1);
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -400px;
+      z-index: 20;
+      &.open {
+        left: 0;
+      }
+    }
+    &__main {
+      width: 100%;
+      margin-left: 0;
+    }
+    &__controlls {
+      flex-wrap: wrap;
+    }
+    &__selected {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__controll {
+      width: 100%;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+    &__pagination {
+      ul {
+        justify-content: center;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__type {
+      display: none;
+    }
+    &__selected {
+      display: none;
+    }
+    &__pagination {
+      ul {
+        margin-left: -8px;
+        li {
+          padding-left: 8px;
+          a {
+            width: 30px;
+            height: 30px;
           }
         }
       }

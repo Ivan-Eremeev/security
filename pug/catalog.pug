@@ -28,7 +28,7 @@ block content
 					h1.title IP-телекамеры
 					.catalog-page__row
 					
-						.catalog-page__aside 
+						.catalog-page__aside#filters
 
 							// filters
 							form(action="#").filters
@@ -458,7 +458,7 @@ block content
 
 						.catalog-page__main 
 
-							.catalog-page__title IP-телекамеры
+							.catalog-page__title.mobile-hide IP-телекамеры
 
 							form(action="#").catalog-page__type 
 								ul 
@@ -506,6 +506,15 @@ block content
 											span 
 										li Категория размещения: Уличное
 											span 
+
+								.catalog-page__filters-show.js-drop-menu(data-drop="filters")
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3 14V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M9 12V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15 8V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M21 2L21 22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									span Фильтры
 
 								form(action="#").catalog-page__controll 
 
@@ -1037,7 +1046,7 @@ block content
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M1.25547 10.0479C1.45896 10.048 1.66244 9.97 1.81745 9.81429L5.61817 5.9902C5.9247 5.68174 5.9247 5.18377 5.61817 4.8752L1.81745 1.05122C1.50935 0.741174 1.0079 0.739482 0.697519 1.04731C0.387135 1.35524 0.385382 1.85618 0.693847 2.16622L3.94045 5.43275L0.693847 8.69918C0.385382 9.00922 0.387135 9.51027 0.697519 9.81809C0.852183 9.97137 1.05392 10.0479 1.25547 10.0479Z" fill="#3460B4"/>
 											</svg>
 
-							.catalog-page__title Подборки
+							.catalog-page__title.mobile-hide Подборки
 
 							form(action="#").catalog-page__type 
 								ul 
