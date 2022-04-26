@@ -1,0 +1,1011 @@
+extends blocks/base.pug
+
+block title 
+	title Каталог
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content 
+
+			// breadcrumbs
+			.breadcrumbs
+				.wrapper 
+					ul 
+						li 
+							a(href="#") Главная
+						li 
+							a(href="#") Средства и системы охранного телевидения
+						li IP-телекамеры
+			//	/breadcrumbs
+
+			// catalog-page
+			.catalog-page
+				.wrapper 
+					h1.title IP-телекамеры
+					.catalog-page__row
+					
+						.catalog-page__aside#filters
+
+							// filters
+							form(action="#").filters
+
+								.catalog-page__title Фильтры
+
+									.catalog-page__clear 
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.7141 0C13.3985 0 13.1427 0.255837 13.1427 0.571439V2.65885C10.2008 -0.189375 5.50694 -0.113371 2.65871 2.82854C1.31641 4.215 0.567586 6.07021 0.571303 7.99998C0.571303 8.31559 0.82714 8.57142 1.14274 8.57142C1.45834 8.57142 1.71415 8.31559 1.71415 7.99998C1.71485 4.52849 4.52959 1.71482 8.00112 1.71552C9.76419 1.71586 11.446 2.45665 12.6365 3.75713L10.105 4.60111C9.80524 4.70086 9.64302 5.02473 9.74276 5.32453C9.8425 5.62433 10.1664 5.78655 10.4662 5.6868L13.8947 4.54396C14.1288 4.46601 14.2864 4.24664 14.2856 3.99997V0.571406C14.2856 0.255837 14.0297 0 13.7141 0Z"/>
+											<path d="M14.8578 7.42847C14.5421 7.42847 14.2863 7.6843 14.2863 7.9999C14.2856 11.4714 11.4709 14.285 7.99934 14.2843C6.23627 14.284 4.55443 13.5432 3.36401 12.2427L5.89542 11.3988C6.19522 11.299 6.35744 10.9751 6.2577 10.6754C6.15796 10.3756 5.83408 10.2133 5.53429 10.3131L2.10572 11.4559C1.87168 11.5339 1.71408 11.7532 1.71485 11.9999V15.4285C1.71485 15.7441 1.97068 15.9999 2.28629 15.9999C2.60189 15.9999 2.85773 15.7441 2.85773 15.4285V13.341C5.79966 16.1892 10.4935 16.1133 13.3417 13.1713C14.684 11.7849 15.4328 9.92967 15.4291 7.9999C15.4292 7.6843 15.1734 7.42847 14.8578 7.42847Z"/>
+										</svg>
+										span Очистить
+
+								.accordion.filters__accordion
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_1").active
+											.filters__title IP-телекамеры
+
+											.filters__arrow 
+
+										#trigger_1.accordion__content.filters__content.open
+											
+											.filters__scroll.scrollbar-inner
+
+												.filters__list
+													ul
+														li 
+															input#filterType_0(type="radio" name="filterType")
+															label(for="filterType_0") Телекамеры купольные
+														li 
+															input#filterType_1(type="radio" name="filterType" checked)
+															label(for="filterType_1") Телекамеры цилиндрические
+														li 
+															input#filterType_2(type="radio" name="filterType")
+															label(for="filterType_2") Телекамеры корпусные
+														li 
+															input#filterType_3(type="radio" name="filterType")
+															label(for="filterType_3") Телекамеры модульные
+														li 
+															input#filterType_4(type="radio" name="filterType")
+															label(for="filterType_4") Телекамеры поворотные
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_2") 
+											.filters__title Производители
+
+											.filters__arrow 
+
+										#trigger_2.accordion__content.filters__content.open
+
+											.input.input--search.input--mb15 
+												input(type="text" placeholder="Найти производителя")
+											
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul 
+														li 
+															input#brand_0(type="checkbox")
+															label(for="brand_0")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_1(type="checkbox")
+															label(for="brand_1")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_2(type="checkbox")
+															label(for="brand_2")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_3(type="checkbox")
+															label(for="brand_3")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_4(type="checkbox")
+															label(for="brand_4")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
+														li 
+															input#brand_5(type="checkbox")
+															label(for="brand_5")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_6(type="checkbox")
+															label(for="brand_6")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_7(type="checkbox")
+															label(for="brand_7")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_8(type="checkbox")
+															label(for="brand_8")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_9(type="checkbox")
+															label(for="brand_9")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
+														li 
+															input#brand_10(type="checkbox")
+															label(for="brand_10")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_11(type="checkbox")
+															label(for="brand_11")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_12(type="checkbox")
+															label(for="brand_12")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_13(type="checkbox")
+															label(for="brand_13")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_14(type="checkbox")
+															label(for="brand_14")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
+
+											.filters__more.js-more-btn Показать еще
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_3") 
+											.filters__title Цена, руб
+
+											.filters__arrow 
+
+										#trigger_3.accordion__content.filters__content.open
+
+											.filters__range
+												.filters__range-inputsrow
+													.filters__range-input
+														.input.input--price
+															input#rangeSliderInput_0(type="text" autocomplete="off")
+															.input__prefix от
+													.filters__range-input
+														.input.input--price
+															input#rangeSliderInput_1(type="text" autocomplete="off")
+															.input__prefix до
+												.filters__range-slider
+													#rangeSlider(data-min="1000" data-max="200000" data-start="1000" data-stop="100000")
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_4") 
+											.filters__title Тип корпуса
+
+											.filters__arrow 
+
+										#trigger_4.accordion__content.filters__content.open
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul 
+														li 
+															input#body_0(type="checkbox")
+															label(for="body_0")
+																span 
+																	span.filters__checkbox
+																	span Компакт
+																span 32
+														li 
+															input#body_1(type="checkbox")
+															label(for="body_1")
+																span 
+																	span.filters__checkbox
+																	span Корпусная
+																span 32
+														li 
+															input#body_2(type="checkbox")
+															label(for="body_2")
+																span 
+																	span.filters__checkbox
+																	span Купольная
+																span 32
+														li 
+															input#body_3(type="checkbox")
+															label(for="body_3")
+																span 
+																	span.filters__checkbox
+																	span Миниатюрная квадратная
+																span 32
+														li 
+															input#body_4(type="checkbox")
+															label(for="body_4")
+																span 
+																	span.filters__checkbox
+																	span Модульная
+																span 32
+														li 
+															input#body_5(type="checkbox")
+															label(for="body_5")
+																span 
+																	span.filters__checkbox
+																	span Компакт
+																span 32
+														li 
+															input#body_6(type="checkbox")
+															label(for="body_6")
+																span 
+																	span.filters__checkbox
+																	span Корпусная
+																span 32
+														li 
+															input#body_7(type="checkbox")
+															label(for="body_7")
+																span 
+																	span.filters__checkbox
+																	span Купольная
+																span 32
+														li 
+															input#body_8(type="checkbox")
+															label(for="body_8")
+																span 
+																	span.filters__checkbox
+																	span Миниатюрная квадратная
+																span 32
+														li 
+															input#body_9(type="checkbox")
+															label(for="body_9")
+																span 
+																	span.filters__checkbox
+																	span Модульная
+																span 32
+
+											.filters__more.js-more-btn Показать еще
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_5") 
+											.filters__title Аудио входы/выходы
+
+											.filters__arrow 
+
+										#trigger_5.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#input_0(type="checkbox")
+															label(for="input_0")
+																span 
+																	span.filters__checkbox
+																	span Вход 1
+																span 32
+														li 
+															input#input_1(type="checkbox")
+															label(for="input_1")
+																span 
+																	span.filters__checkbox
+																	span Вход 2
+																span 32
+														li 
+															input#input_2(type="checkbox")
+															label(for="input_2")
+																span 
+																	span.filters__checkbox
+																	span Вход 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_7") 
+											.filters__title Аудио входы/выходы
+
+											.filters__arrow 
+
+										#trigger_7.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#input_0(type="checkbox")
+															label(for="input_0")
+																span 
+																	span.filters__checkbox
+																	span Вход 1
+																span 32
+														li 
+															input#input_1(type="checkbox")
+															label(for="input_1")
+																span 
+																	span.filters__checkbox
+																	span Вход 2
+																span 32
+														li 
+															input#input_2(type="checkbox")
+															label(for="input_2")
+																span 
+																	span.filters__checkbox
+																	span Вход 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_8") 
+											.filters__title Категория размещения
+
+											.filters__arrow 
+
+										#trigger_8.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#category_0(type="checkbox")
+															label(for="category_0")
+																span 
+																	span.filters__checkbox
+																	span Категория 1
+																span 32
+														li 
+															input#category_1(type="checkbox")
+															label(for="category_1")
+																span 
+																	span.filters__checkbox
+																	span Категория 2
+																span 32
+														li 
+															input#category_2(type="checkbox")
+															label(for="category_2")
+																span 
+																	span.filters__checkbox
+																	span Категория 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__content.filters__content.filters__content--open.open
+
+											.filters__switch-list 
+												ul 
+													li 
+														input#switch_0(type="checkbox")
+														label(for="switch_0") 
+															span Вандалостойкая 
+															span.filters__switch
+													li 
+														input#switch_1(type="checkbox")
+														label(for="switch_1") 
+															span Сенсорный экран 
+															span.filters__switch
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_9") 
+											.filters__title WI-FI
+
+											.filters__arrow 
+
+										#trigger_9.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#wifi_0(type="radio" name="wifi" checked)
+															label(for="wifi_0")
+																span 
+																	span.filters__radio
+																	span Есть
+																span 32
+														li 
+															input#wifi_1(type="radio" name="wifi")
+															label(for="wifi_1")
+																span 
+																	span.filters__radio
+																	span Нет
+																span 32
+							// /filters
+
+						.catalog-page__main 
+
+							.catalog-page__title.mobile-hide IP-телекамеры
+
+							form(action="#").catalog-page__type 
+								ul 
+									li 
+										input#type_0(type="radio" name="type")
+										label(for="type_0") Телекамеры купольные
+									li 
+										input#type_1(type="radio" name="type" checked)
+										label(for="type_1") Телекамеры цилиндрические
+									li 
+										input#type_2(type="radio" name="type")
+										label(for="type_2") Телекамеры корпусные
+									li 
+										input#type_3(type="radio" name="type")
+										label(for="type_3") Телекамеры модульные
+									li 
+										input#type_4(type="radio" name="type")
+										label(for="type_4") Телекамеры поворотные
+									li 
+										input#type_5(type="radio" name="type")
+										label(for="type_5") Телекамеры миниатюрные
+									li 
+										input#type_6(type="radio" name="type")
+										label(for="type_6") Телекамеры поворотные
+									li 
+										input#type_7(type="radio" name="type")
+										label(for="type_7") Телекамеры купольные
+									li 
+										input#type_8(type="radio" name="type")
+										label(for="type_8") Телекамеры цилиндрические
+
+							.catalog-page__controlls 
+
+								.catalog-page__selected 
+									ul 
+										li Производители: Alteron
+											span 
+										li Цена: от 1 000 до 10 000
+											span 
+										li Тип корпуса: Компакт
+											span 
+										li WIFI: Есть
+											span 
+										li Сенсорный экран
+											span 
+										li Категория размещения: Уличное
+											span 
+
+								.catalog-page__filters-show.js-drop-menu(data-drop="filters")
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3 14V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M9 12V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15 8V22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M21 2L21 22" stroke="#3460B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									span Фильтры
+
+								form(action="#").catalog-page__controll 
+
+									.select.select--icon
+										.select__icon 
+											<svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect width="18" height="1" rx="0.5" fill="#22262D"/>
+												<rect y="6" width="13" height="1" rx="0.5" fill="#22262D"/>
+												<rect y="12" width="9" height="1" rx="0.5" fill="#22262D"/>
+											</svg>
+										select(name="#") 
+											option(value="#") Сначала новинки
+											option(value="#") Сначала популярное
+											option(value="#") Сначала дешевле
+											option(value="#") Сначала дороже
+										.select__arrow 
+
+									.catalog-page__sort
+
+										.catalog-page__sort-icon 
+											input#sortView_list(type="radio" name="sortView")
+											label(for="sortView_list") 
+												<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<line y1="0.5" x2="20" y2="0.5"/>
+													<line y1="8.5" x2="20" y2="8.5"/>
+													<line y1="16.5" x2="20" y2="16.5"/>
+												</svg>
+
+										.catalog-page__sort-icon
+											input#sortView_grid(type="radio" name="sortView" checked)
+											label(for="sortView_grid") 
+												<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="0.5" y="0.5" width="7" height="7"/>
+													<rect x="0.5" y="11.5" width="7" height="7"/>
+													<rect x="11.5" y="0.5" width="7" height="7"/>
+													<rect x="11.5" y="11.5" width="7" height="7"/>
+												</svg>
+
+							.catalog-page__content 
+								.row.gy-20
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_1.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_2.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_3.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_4.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_1.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_2.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_3.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+									.catalog-page__col-list 
+										// card-list
+										.card-list
+											.card-list__img 
+												img(src="img/camera_4.jpg", alt="")
+											.card-list__head
+												.card-list__title DS-2CD2123G0E-I(B)(2.8мм)
+											.card-list__parameters 
+												.card-list__table
+													table 
+														tr
+															td Разрешение
+															td 1920х1080
+														tr
+															td Кодек сжатия видео
+															td H.265; H.264; MJPEG
+														tr
+															td Чувствительный элемент
+															td 1/2.8" Progressive Scan CMOS
+														tr
+															td Объектив, мм
+															td 6.0
+														tr
+															td ИК-подсветка, м
+															td 30
+											.card-list__controlls
+												.card-list__price 12 999 ₽
+													span 15 999 ₽
+												.card-list__row 
+													.btn.btn--blue 
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.44772 0.447715 1 1 1H3.39566C4.80175 1 6.01919 1.9766 6.32422 3.34921L6.80217 5.5H21.1208C22.7251 5.5 23.9142 6.98964 23.5587 8.55405L22.5366 13.0513C21.8122 16.2384 18.9789 18.5 15.7106 18.5H13.0075C9.62445 18.5 6.72554 16.0806 6.12037 12.7522L5.0196 6.69799L4.37184 3.78307C4.27017 3.32553 3.86436 3 3.39566 3H1C0.447715 3 0 2.55228 0 2ZM7.19821 7.5L8.08811 12.3944C8.52037 14.7719 10.591 16.5 13.0075 16.5H15.7106C18.0451 16.5 20.0689 14.8845 20.5863 12.6081L21.6084 8.11081C21.6795 7.79793 21.4417 7.5 21.1208 7.5H7.19821Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 21C6.5 19.8954 7.39543 19 8.5 19C9.60457 19 10.5 19.8954 10.5 21C10.5 22.1046 9.60457 23 8.5 23C7.39543 23 6.5 22.1046 6.5 21Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 21C18.5 19.8954 19.3954 19 20.5 19C21.6046 19 22.5 19.8954 22.5 21C22.5 22.1046 21.6046 23 20.5 23C19.3954 23 18.5 22.1046 18.5 21Z" fill="white"/>
+														</svg>
+														| В корзину
+													.card-list__icons 
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5493 13.9082L18.8646 13.1794L19.5493 13.9082ZM19.7885 6.52734L18.9984 7.14034L19.7885 6.52734ZM4.21154 6.52735L3.42146 5.91435L4.21154 6.52735ZM4.45067 13.9082L3.766 14.6371L4.45067 13.9082ZM11.4033 20.4395L12.088 19.7106L11.4033 20.4395ZM11.9037 20.8046L11.7111 21.7859L11.9037 20.8046ZM12.0963 20.8046L12.2889 21.7859L12.0963 20.8046ZM12.088 19.7106L5.13535 13.1794L3.766 14.6371L10.7186 21.1683L12.088 19.7106ZM4.69227 7.53907L5.00163 7.14034L3.42146 5.91435L3.1121 6.31307L4.69227 7.53907ZM18.9984 7.14034L19.3077 7.53906L20.8879 6.31307L20.5785 5.91434L18.9984 7.14034ZM18.8646 13.1794L11.912 19.7106L13.2814 21.1683L20.234 14.6371L18.8646 13.1794ZM19.3077 7.53906C20.6368 9.25207 20.4449 11.6949 18.8646 13.1794L20.234 14.6371C22.5661 12.4463 22.8493 8.84113 20.8879 6.31307L19.3077 7.53906ZM13.3891 7.74438C14.4515 5.51842 17.4864 5.1916 18.9984 7.14034L20.5785 5.91434C18.1541 2.78956 13.2877 3.31361 11.5842 6.88292L13.3891 7.74438ZM10.6109 7.74438C11.1685 8.91272 12.8315 8.91272 13.3891 7.74438L11.5842 6.88292C11.7511 6.5332 12.2489 6.5332 12.4158 6.88292L10.6109 7.74438ZM5.00163 7.14034C6.51358 5.19161 9.54846 5.51842 10.6109 7.74438L12.4158 6.88292C10.7123 3.31361 5.84586 2.78956 3.42146 5.91435L5.00163 7.14034ZM5.13535 13.1794C3.55512 11.6949 3.36322 9.25207 4.69227 7.53907L3.1121 6.31307C1.15068 8.84113 1.43388 12.4463 3.766 14.6371L5.13535 13.1794ZM10.7186 21.1683C10.8238 21.2671 10.9548 21.3917 11.0802 21.4883C11.219 21.5952 11.4274 21.7302 11.7111 21.7859L12.0963 19.8233C12.1642 19.8367 12.2193 19.8588 12.258 19.8787C12.2928 19.8967 12.3087 19.9101 12.3006 19.9038C12.2919 19.8971 12.2723 19.881 12.2335 19.8459C12.1948 19.8109 12.1498 19.7687 12.088 19.7106L10.7186 21.1683ZM11.912 19.7106C11.8502 19.7687 11.8052 19.8109 11.7665 19.8459C11.7277 19.881 11.7081 19.8971 11.6994 19.9038C11.6913 19.9101 11.7072 19.8967 11.742 19.8787C11.7807 19.8588 11.8358 19.8367 11.9037 19.8233L12.2889 21.7859C12.5726 21.7302 12.781 21.5952 12.9198 21.4883C13.0452 21.3917 13.1762 21.2671 13.2814 21.1683L11.912 19.7106ZM11.7111 21.7859C11.9019 21.8233 12.0981 21.8233 12.2889 21.7859L11.9037 19.8233C11.9673 19.8109 12.0327 19.8109 12.0963 19.8233L11.7111 21.7859Z"/>
+															</svg>
+														.card-list__icon 
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C5.55228 13 6 13.4133 6 13.9231V20.0769C6 20.5867 5.55228 21 5 21C4.44772 21 4 20.5867 4 20.0769V13.9231C4 13.4133 4.44772 13 5 13Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10.5523 11 11 11.4333 11 11.9677V20.0323C11 20.5667 10.5523 21 10 21C9.44772 21 9 20.5667 9 20.0323V11.9677C9 11.4333 9.44772 11 10 11Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15.5523 8 16 8.42588 16 8.95122V20.0488C16 20.5741 15.5523 21 15 21C14.4477 21 14 20.5741 14 20.0488V8.95122C14 8.42588 14.4477 8 15 8Z"/>
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M20 3C20.5523 3 21 3.43173 21 3.96429L21 20.0357C21 20.5683 20.5523 21 20 21C19.4477 21 19 20.5683 19 20.0357L19 3.96429C19 3.43173 19.4477 3 20 3Z"/>
+															</svg>
+										//	/card-list
+
+							.catalog-page__more 
+								.btn.btn--gray Показать еще 20 товаров
+
+							.catalog-page__pagination 
+								ul 
+									li 
+										a(href="#").disabled 
+											<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.74453 0.95202C4.54104 0.951912 4.33756 1.02988 4.18255 1.18559L0.381835 5.00968C0.0752974 5.31814 0.0752974 5.81611 0.381835 6.12468L4.18255 9.94866C4.49065 10.2587 4.9921 10.2604 5.30248 9.95257C5.61286 9.64464 5.61462 9.1437 5.30615 8.83366L2.05955 5.56712L5.30615 2.3007C5.61462 1.99066 5.61286 1.48961 5.30248 1.18178C5.14782 1.02851 4.94608 0.95202 4.74453 0.95202Z" fill="#3460B4"/>
+											</svg>
+									li 
+										a(href="#").active 1
+									li 
+										a(href="#") 2
+									li 
+										a(href="#") 3
+									li 
+										a(href="#") 4
+									li 
+										a(href="#") 5
+									li 
+										a(href="#") 
+											<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M1.25547 10.0479C1.45896 10.048 1.66244 9.97 1.81745 9.81429L5.61817 5.9902C5.9247 5.68174 5.9247 5.18377 5.61817 4.8752L1.81745 1.05122C1.50935 0.741174 1.0079 0.739482 0.697519 1.04731C0.387135 1.35524 0.385382 1.85618 0.693847 2.16622L3.94045 5.43275L0.693847 8.69918C0.385382 9.00922 0.387135 9.51027 0.697519 9.81809C0.852183 9.97137 1.05392 10.0479 1.25547 10.0479Z" fill="#3460B4"/>
+											</svg>
+
+							.catalog-page__title.mobile-hide Подборки
+
+							form(action="#").catalog-page__type 
+								ul 
+									li 
+										input#collections_0(type="radio" name="collections")
+										label(for="collections_0") Телекамеры купольные
+									li 
+										input#collections_1(type="radio" name="collections" checked)
+										label(for="collections_1") Телекамеры цилиндрические
+									li 
+										input#collections_2(type="radio" name="collections")
+										label(for="collections_2") Телекамеры корпусные
+									li 
+										input#collections_3(type="radio" name="collections")
+										label(for="collections_3") Телекамеры модульные
+									li 
+										input#collections_4(type="radio" name="collections")
+										label(for="collections_4") Телекамеры поворотные
+									li 
+										input#collections_5(type="radio" name="collections")
+										label(for="collections_5") Телекамеры миниатюрные
+									li 
+										input#collections_6(type="radio" name="collections")
+										label(for="collections_6") Телекамеры поворотные
+									li 
+										input#collections_7(type="radio" name="collections")
+										label(for="collections_7") Телекамеры купольные
+									li 
+										input#collections_8(type="radio" name="collections")
+										label(for="collections_8") Телекамеры цилиндрические
+
+			//	/catalog-page
+			
+		include blocks/footer.pug

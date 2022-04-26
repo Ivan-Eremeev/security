@@ -1,0 +1,143 @@
+.card-list {
+  display: grid;
+  grid-template-columns: 16% auto 230px;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "__img __head __controlls"
+    "__img __parameters __controlls";
+    padding: 30px 20px 30px 30px;
+    border: 1px solid #F5F7FB;
+    border-radius: 6px;
+  &__img {
+    grid-area: __img;
+  }
+  &__controlls {
+    grid-area: __controlls;
+  }
+  &__head {
+    grid-area: __head;
+  }
+  &__parameters {
+    grid-area: __parameters;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  &__title {
+    font-weight: bold;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  &__table {
+    font-size: 14px;
+    table {
+      margin-left: -32px;
+      tr {
+        td {
+          padding: 4px 0;
+          padding-left: 32px;
+          &:nth-child(1) {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+  &__gray {
+    opacity: 0.7;
+  }
+  &__price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 19px;
+    span {
+      font-size: 16px;
+      color: $gray;
+      margin-left: 19px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #F8483A;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%) rotate(-9.57deg);
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    .btn {
+      padding: 9px 18px;
+    }
+  }
+  &__icons {
+    display: flex;
+  }
+  &__icon {
+    margin-left: 19px;
+    cursor: pointer;
+    user-select: none;
+    svg {
+      fill: #C2D0E9;
+      transition: 0.1s;
+    }
+    &:hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    grid-template-columns: 20% auto auto;
+    grid-template-areas:
+      "__head __head __head"
+      "__img __parameters __parameters"
+      "__controlls __controlls __controlls";
+    padding: 15px 10px 15px 15px;
+    &__title {
+      padding-left: 0;
+    }
+    &__controlls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    &__price {
+      margin: 5px 0;
+    }
+    &__parameters {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: $break_xs) {
+    grid-template-columns: 30% auto auto;
+    &__parameters {
+      padding-left: 20px;
+    }
+    &__table {
+      table {
+        margin-left: 0;
+    
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+    
+          td {
+            width: 100%;
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -172,6 +172,9 @@
     @include col-lg(4);
     @include col-xs(6);
   }
+  &__col-list {
+    @include col(12);
+  }
   &__more {
     margin-bottom: 20px;
     .btn {

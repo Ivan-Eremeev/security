@@ -97,6 +97,12 @@ body {
     padding-top: $gutter;
   }
 }
+.row.gy-20 {
+  margin-top: -20px;
+  > * {
+    padding-top: 20px;
+  }
+}
 .navpage {
   padding: 50px 0;
 }
