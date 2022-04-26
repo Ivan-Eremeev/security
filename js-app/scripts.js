@@ -916,4 +916,54 @@ $(document).ready(function () {
 	// JQueryScrollbar
 	$('.scrollbar-inner').scrollbar();
 
+	// NouiSlider
+	var rangeSlider = document.getElementById('rangeSlider');
+	var minVal = Number(rangeSlider.getAttribute('data-min'));
+	var maxVal = Number(rangeSlider.getAttribute('data-max'));
+	var startVal = Number(rangeSlider.getAttribute('data-start'));
+	var stopVal = Number(rangeSlider.getAttribute('data-stop'));
+	var input0 = document.getElementById('rangeSliderInput_0');
+	var input1 = document.getElementById('rangeSliderInput_1');
+	var inputs = [input0, input1];
+
+	noUiSlider.create(rangeSlider, {
+		start: [startVal, stopVal],
+		connect: true,
+		format: wNumb({
+			decimals: 0
+		}),
+		range: {
+			'min': minVal,
+			'max': maxVal
+		}
+	});
+
+	rangeSlider.noUiSlider.on('update', function (values, handle) {
+		inputs[handle].value = values[handle];
+	});
+
+	inputs.forEach(function (input, handle) {
+		input.addEventListener('input', function () {
+			rangeSlider.noUiSlider.setHandle(handle, this.value);
+		});
+	});
+
+	// Показать еще в фильтрах
+	function showMoreFilters() {
+		const list = $('.js-more-list');
+		const btn = $('.js-more-btn');
+		list.each( function () {
+			$(this).find('li').each(function (index) {
+				if (index > 4) {
+					$(this).fadeOut();
+				}
+			})
+		})
+		btn.on('click', function () {
+			$(this).fadeOut();
+			$(this).parent().find($('.js-more-list li')).fadeIn();
+		})
+	}
+	showMoreFilters();
+
 });

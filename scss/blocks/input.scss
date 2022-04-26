@@ -9,9 +9,17 @@
     border-radius: 6px;
     outline: none;
     transition: 0.1s;
+    font-size: 15px;
     &:focus {
       border-color: $blue;
     }
+  }
+  &__prefix {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translate(0,-50%);
+    font-size: 15px;
   }
   &--search {
     input {
@@ -20,6 +28,14 @@
       background-repeat: no-repeat;
       background-position: top 13px left 10px;
     }
+  }
+  &--price {
+    input {
+      padding-left: 32px;
+    }
+  }
+  &--mb15 {
+    margin-bottom: 15px;
   }
   &.error {
     input {

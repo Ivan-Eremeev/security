@@ -82,12 +82,12 @@ block content
 
 										#trigger_2.accordion__content.filters__content.open
 
-											.input.input--search 
+											.input.input--search.input--mb15 
 												input(type="text" placeholder="Найти производителя")
 											
 											.filters__scroll.scrollbar-inner
 
-												.filters__checklist 
+												.filters__checklist.js-more-list
 													ul 
 														li 
 															input#brand_0(type="checkbox")
@@ -159,16 +159,301 @@ block content
 																	span.filters__checkbox
 																	span Dahua
 																span 2
+														li 
+															input#brand_10(type="checkbox")
+															label(for="brand_10")
+																span 
+																	span.filters__checkbox
+																	span Alteron
+																span 32
+														li 
+															input#brand_11(type="checkbox")
+															label(for="brand_11")
+																span 
+																	span.filters__checkbox
+																	span Beward
+																span 434
+														li 
+															input#brand_12(type="checkbox")
+															label(for="brand_12")
+																span 
+																	span.filters__checkbox
+																	span BOLID
+																span 52
+														li 
+															input#brand_13(type="checkbox")
+															label(for="brand_13")
+																span 
+																	span.filters__checkbox
+																	span ComOnyx
+																span 26
+														li 
+															input#brand_14(type="checkbox")
+															label(for="brand_14")
+																span 
+																	span.filters__checkbox
+																	span Dahua
+																span 2
+
+											.filters__more.js-more-btn Показать еще
 
 									.accordion__item.filters__item
 
-										.accordion__trigger.filters__trigger(data-trigger="trigger_3") 
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_3") 
 											.filters__title Цена, руб
 
 											.filters__arrow 
 
-										#trigger_3.accordion__content.filters__content
-											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+										#trigger_3.accordion__content.filters__content.open
+
+											.filters__range
+												.filters__range-inputsrow
+													.filters__range-input
+														.input.input--price
+															input#rangeSliderInput_0(type="text" autocomplete="off")
+															.input__prefix от
+													.filters__range-input
+														.input.input--price
+															input#rangeSliderInput_1(type="text" autocomplete="off")
+															.input__prefix до
+												.filters__range-slider
+													#rangeSlider(data-min="1000" data-max="200000" data-start="1000" data-stop="100000")
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger.active(data-trigger="trigger_4") 
+											.filters__title Тип корпуса
+
+											.filters__arrow 
+
+										#trigger_4.accordion__content.filters__content.open
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul 
+														li 
+															input#body_0(type="checkbox")
+															label(for="body_0")
+																span 
+																	span.filters__checkbox
+																	span Компакт
+																span 32
+														li 
+															input#body_1(type="checkbox")
+															label(for="body_1")
+																span 
+																	span.filters__checkbox
+																	span Корпусная
+																span 32
+														li 
+															input#body_2(type="checkbox")
+															label(for="body_2")
+																span 
+																	span.filters__checkbox
+																	span Купольная
+																span 32
+														li 
+															input#body_3(type="checkbox")
+															label(for="body_3")
+																span 
+																	span.filters__checkbox
+																	span Миниатюрная квадратная
+																span 32
+														li 
+															input#body_4(type="checkbox")
+															label(for="body_4")
+																span 
+																	span.filters__checkbox
+																	span Модульная
+																span 32
+														li 
+															input#body_5(type="checkbox")
+															label(for="body_5")
+																span 
+																	span.filters__checkbox
+																	span Компакт
+																span 32
+														li 
+															input#body_6(type="checkbox")
+															label(for="body_6")
+																span 
+																	span.filters__checkbox
+																	span Корпусная
+																span 32
+														li 
+															input#body_7(type="checkbox")
+															label(for="body_7")
+																span 
+																	span.filters__checkbox
+																	span Купольная
+																span 32
+														li 
+															input#body_8(type="checkbox")
+															label(for="body_8")
+																span 
+																	span.filters__checkbox
+																	span Миниатюрная квадратная
+																span 32
+														li 
+															input#body_9(type="checkbox")
+															label(for="body_9")
+																span 
+																	span.filters__checkbox
+																	span Модульная
+																span 32
+
+											.filters__more.js-more-btn Показать еще
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_5") 
+											.filters__title Аудио входы/выходы
+
+											.filters__arrow 
+
+										#trigger_5.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#input_0(type="checkbox")
+															label(for="input_0")
+																span 
+																	span.filters__checkbox
+																	span Вход 1
+																span 32
+														li 
+															input#input_1(type="checkbox")
+															label(for="input_1")
+																span 
+																	span.filters__checkbox
+																	span Вход 2
+																span 32
+														li 
+															input#input_2(type="checkbox")
+															label(for="input_2")
+																span 
+																	span.filters__checkbox
+																	span Вход 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_7") 
+											.filters__title Аудио входы/выходы
+
+											.filters__arrow 
+
+										#trigger_7.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#input_0(type="checkbox")
+															label(for="input_0")
+																span 
+																	span.filters__checkbox
+																	span Вход 1
+																span 32
+														li 
+															input#input_1(type="checkbox")
+															label(for="input_1")
+																span 
+																	span.filters__checkbox
+																	span Вход 2
+																span 32
+														li 
+															input#input_2(type="checkbox")
+															label(for="input_2")
+																span 
+																	span.filters__checkbox
+																	span Вход 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_8") 
+											.filters__title Категория размещения
+
+											.filters__arrow 
+
+										#trigger_8.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#category_0(type="checkbox")
+															label(for="category_0")
+																span 
+																	span.filters__checkbox
+																	span Категория 1
+																span 32
+														li 
+															input#category_1(type="checkbox")
+															label(for="category_1")
+																span 
+																	span.filters__checkbox
+																	span Категория 2
+																span 32
+														li 
+															input#category_2(type="checkbox")
+															label(for="category_2")
+																span 
+																	span.filters__checkbox
+																	span Категория 3
+																span 32
+
+									.accordion__item.filters__item
+
+										.accordion__content.filters__content.filters__content--open.open
+
+											.filters__switch-list 
+												ul 
+													li 
+														input#switch_0(type="checkbox")
+														label(for="switch_0") 
+															span Вандалостойкая 
+															span.filters__switch
+													li 
+														input#switch_1(type="checkbox")
+														label(for="switch_1") 
+															span Сенсорный экран 
+															span.filters__switch
+
+									.accordion__item.filters__item
+
+										.accordion__trigger.filters__trigger(data-trigger="trigger_9") 
+											.filters__title WI-FI
+
+											.filters__arrow 
+
+										#trigger_9.accordion__content.filters__content
+
+											.filters__scroll.scrollbar-inner
+
+												.filters__checklist.js-more-list
+													ul
+														li 
+															input#wifi_0(type="radio" name="wifi" checked)
+															label(for="wifi_0")
+																span 
+																	span.filters__radio
+																	span Есть
+																span 32
+														li 
+															input#wifi_1(type="radio" name="wifi")
+															label(for="wifi_1")
+																span 
+																	span.filters__radio
+																	span Нет
+																span 32
 							// /filters
 
 						.catalog-page__main 

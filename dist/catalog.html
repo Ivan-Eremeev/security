@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/libs/jquery.formstyler.css">
 		<link rel="stylesheet" href="css/libs/jquery.formstyler.theme.css">
+		<link rel="stylesheet" href="css/libs/nouislider.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -431,11 +432,11 @@
 												<div class="filters__arrow"> </div>
 											</div>
 											<div class="accordion__content filters__content open" id="trigger_2">
-												<div class="input input--search"> 
+												<div class="input input--search input--mb15"> 
 													<input type="text" placeholder="Найти производителя">
 												</div>
 												<div class="filters__scroll scrollbar-inner">
-													<div class="filters__checklist"> 
+													<div class="filters__checklist js-more-list">
 														<ul> 
 															<li> 
 																<input id="brand_0" type="checkbox">
@@ -477,17 +478,229 @@
 																<input id="brand_9" type="checkbox">
 																<label for="brand_9"><span> <span class="filters__checkbox"></span><span>Dahua</span></span><span>2</span></label>
 															</li>
+															<li> 
+																<input id="brand_10" type="checkbox">
+																<label for="brand_10"><span> <span class="filters__checkbox"></span><span>Alteron</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="brand_11" type="checkbox">
+																<label for="brand_11"><span> <span class="filters__checkbox"></span><span>Beward</span></span><span>434</span></label>
+															</li>
+															<li> 
+																<input id="brand_12" type="checkbox">
+																<label for="brand_12"><span> <span class="filters__checkbox"></span><span>BOLID</span></span><span>52</span></label>
+															</li>
+															<li> 
+																<input id="brand_13" type="checkbox">
+																<label for="brand_13"><span> <span class="filters__checkbox"></span><span>ComOnyx</span></span><span>26</span></label>
+															</li>
+															<li> 
+																<input id="brand_14" type="checkbox">
+																<label for="brand_14"><span> <span class="filters__checkbox"></span><span>Dahua</span></span><span>2</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="filters__more js-more-btn">Показать еще</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__trigger filters__trigger active" data-trigger="trigger_3"> 
+												<div class="filters__title">Цена, руб</div>
+												<div class="filters__arrow"> </div>
+											</div>
+											<div class="accordion__content filters__content open" id="trigger_3">
+												<div class="filters__range">
+													<div class="filters__range-inputsrow">
+														<div class="filters__range-input">
+															<div class="input input--price">
+																<input id="rangeSliderInput_0" type="text" autocomplete="off">
+																<div class="input__prefix">от</div>
+															</div>
+														</div>
+														<div class="filters__range-input">
+															<div class="input input--price">
+																<input id="rangeSliderInput_1" type="text" autocomplete="off">
+																<div class="input__prefix">до</div>
+															</div>
+														</div>
+													</div>
+													<div class="filters__range-slider">
+														<div id="rangeSlider" data-min="1000" data-max="200000" data-start="1000" data-stop="100000"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__trigger filters__trigger active" data-trigger="trigger_4"> 
+												<div class="filters__title">Тип корпуса</div>
+												<div class="filters__arrow"> </div>
+											</div>
+											<div class="accordion__content filters__content open" id="trigger_4">
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist js-more-list">
+														<ul> 
+															<li> 
+																<input id="body_0" type="checkbox">
+																<label for="body_0"><span> <span class="filters__checkbox"></span><span>Компакт</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_1" type="checkbox">
+																<label for="body_1"><span> <span class="filters__checkbox"></span><span>Корпусная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_2" type="checkbox">
+																<label for="body_2"><span> <span class="filters__checkbox"></span><span>Купольная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_3" type="checkbox">
+																<label for="body_3"><span> <span class="filters__checkbox"></span><span>Миниатюрная квадратная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_4" type="checkbox">
+																<label for="body_4"><span> <span class="filters__checkbox"></span><span>Модульная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_5" type="checkbox">
+																<label for="body_5"><span> <span class="filters__checkbox"></span><span>Компакт</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_6" type="checkbox">
+																<label for="body_6"><span> <span class="filters__checkbox"></span><span>Корпусная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_7" type="checkbox">
+																<label for="body_7"><span> <span class="filters__checkbox"></span><span>Купольная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_8" type="checkbox">
+																<label for="body_8"><span> <span class="filters__checkbox"></span><span>Миниатюрная квадратная</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="body_9" type="checkbox">
+																<label for="body_9"><span> <span class="filters__checkbox"></span><span>Модульная</span></span><span>32</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="filters__more js-more-btn">Показать еще</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__trigger filters__trigger" data-trigger="trigger_5"> 
+												<div class="filters__title">Аудио входы/выходы</div>
+												<div class="filters__arrow"> </div>
+											</div>
+											<div class="accordion__content filters__content" id="trigger_5">
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist js-more-list">
+														<ul>
+															<li> 
+																<input id="input_0" type="checkbox">
+																<label for="input_0"><span> <span class="filters__checkbox"></span><span>Вход 1</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="input_1" type="checkbox">
+																<label for="input_1"><span> <span class="filters__checkbox"></span><span>Вход 2</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="input_2" type="checkbox">
+																<label for="input_2"><span> <span class="filters__checkbox"></span><span>Вход 3</span></span><span>32</span></label>
+															</li>
 														</ul>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="accordion__item filters__item">
-											<div class="accordion__trigger filters__trigger" data-trigger="trigger_3"> 
-												<div class="filters__title">Цена, руб</div>
+											<div class="accordion__trigger filters__trigger" data-trigger="trigger_7"> 
+												<div class="filters__title">Аудио входы/выходы</div>
 												<div class="filters__arrow"> </div>
 											</div>
-											<div class="accordion__content filters__content" id="trigger_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+											<div class="accordion__content filters__content" id="trigger_7">
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist js-more-list">
+														<ul>
+															<li> 
+																<input id="input_0" type="checkbox">
+																<label for="input_0"><span> <span class="filters__checkbox"></span><span>Вход 1</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="input_1" type="checkbox">
+																<label for="input_1"><span> <span class="filters__checkbox"></span><span>Вход 2</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="input_2" type="checkbox">
+																<label for="input_2"><span> <span class="filters__checkbox"></span><span>Вход 3</span></span><span>32</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__trigger filters__trigger" data-trigger="trigger_8"> 
+												<div class="filters__title">Категория размещения</div>
+												<div class="filters__arrow"> </div>
+											</div>
+											<div class="accordion__content filters__content" id="trigger_8">
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist js-more-list">
+														<ul>
+															<li> 
+																<input id="category_0" type="checkbox">
+																<label for="category_0"><span> <span class="filters__checkbox"></span><span>Категория 1</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="category_1" type="checkbox">
+																<label for="category_1"><span> <span class="filters__checkbox"></span><span>Категория 2</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="category_2" type="checkbox">
+																<label for="category_2"><span> <span class="filters__checkbox"></span><span>Категория 3</span></span><span>32</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__content filters__content filters__content--open open">
+												<div class="filters__switch-list"> 
+													<ul> 
+														<li> 
+															<input id="switch_0" type="checkbox">
+															<label for="switch_0"> <span>Вандалостойкая </span><span class="filters__switch"></span></label>
+														</li>
+														<li> 
+															<input id="switch_1" type="checkbox">
+															<label for="switch_1"> <span>Сенсорный экран </span><span class="filters__switch"></span></label>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__item filters__item">
+											<div class="accordion__trigger filters__trigger" data-trigger="trigger_9"> 
+												<div class="filters__title">WI-FI</div>
+												<div class="filters__arrow"> </div>
+											</div>
+											<div class="accordion__content filters__content" id="trigger_9">
+												<div class="filters__scroll scrollbar-inner">
+													<div class="filters__checklist js-more-list">
+														<ul>
+															<li> 
+																<input id="wifi_0" type="radio" name="wifi" checked>
+																<label for="wifi_0"><span> <span class="filters__radio"></span><span>Есть</span></span><span>32</span></label>
+															</li>
+															<li> 
+																<input id="wifi_1" type="radio" name="wifi">
+																<label for="wifi_1"><span> <span class="filters__radio"></span><span>Нет</span></span><span>32</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</form>
@@ -1176,6 +1389,8 @@
 		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/libs/swiper-bundle.min.js"> </script>
 		<script src="js/libs/jquery.formstyler.min.js"> </script>
+		<script src="js/libs/wNumb.min.js"></script>
+		<script src="js/libs/nouislider.min.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
