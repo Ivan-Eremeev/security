@@ -119,29 +119,29 @@ $(document).ready(function () {
 	// };
 	// fontResize();
 
-	// // Табы
-	// function tabs(tabs) {
-	// 	if (tabs.length) {
-	// 		tabs.each(function() {
-	// 			var trigger = $(this).find('#tabs_triggers').children(),
-	// 					content = $(this).find('#tabs_content').children(),
-	// 					time = 300;
-	// 			trigger.click(function () {
-	// 				var $this = $(this),
-	// 						index = $this.index();
-	// 				if (!$this.hasClass('active')) {
-	// 					trigger.removeClass('active');
-	// 					$this.addClass('active');
-	// 					content.removeClass('open').hide();
-	// 					content.eq(index).fadeIn(time, function () {$(this).addClass('open')});
-	// 				}else {
-	// 					return false;
-	// 				}
-	// 			});
-	// 		});
-	// 	}
-	// }
-	// tabs($('.js-tabs'));
+	// Табы
+	function tabs(tabs) {
+		if (tabs.length) {
+			tabs.each(function() {
+				var trigger = $(this).find('.js-tabs_triggers').children(),
+						content = $(this).find('.js-tabs_content').children(),
+						time = 300;
+				trigger.click(function () {
+					var $this = $(this),
+							index = $this.index();
+					if (!$this.hasClass('active')) {
+						trigger.removeClass('active');
+						$this.addClass('active');
+						content.removeClass('open').hide();
+						content.eq(index).fadeIn(time, function () {$(this).addClass('open')});
+					}else {
+						return false;
+					}
+				});
+			});
+		}
+	}
+	tabs($('.js-tabs'));
 
 	// Аккордеон
 	function accordion() {
@@ -796,7 +796,7 @@ $(document).ready(function () {
 		let width = window.clientWidth;
 
 		if (header) {
-			setPaddingTopFromHeader();
+			// setPaddingTopFromHeader();
 
 			setNavbarPosition();
 
@@ -908,6 +908,22 @@ $(document).ready(function () {
 		}
 	});
 
+	var productSliderNav = new Swiper("#productSliderNav", {
+		spaceBetween: 12,
+		slidesPerView: 5,
+		freeMode: true,
+		direction: "vertical",
+		watchSlidesProgress: true,
+		grabCursor: true,
+	});
+	var productSliderMain = new Swiper("#productSliderMain", {
+		spaceBetween: 10,
+		grabCursor: true,
+		thumbs: {
+			swiper: productSliderNav
+		}
+	});
+
 	// FormStyler
 	$('select').styler({
 		selectVisibleOptions: 10,
@@ -917,36 +933,42 @@ $(document).ready(function () {
 	$('.scrollbar-inner').scrollbar();
 
 	// NouiSlider
-	var rangeSlider = document.getElementById('rangeSlider');
-	var minVal = Number(rangeSlider.getAttribute('data-min'));
-	var maxVal = Number(rangeSlider.getAttribute('data-max'));
-	var startVal = Number(rangeSlider.getAttribute('data-start'));
-	var stopVal = Number(rangeSlider.getAttribute('data-stop'));
-	var input0 = document.getElementById('rangeSliderInput_0');
-	var input1 = document.getElementById('rangeSliderInput_1');
-	var inputs = [input0, input1];
+	function noUiSliderInit() {
+		var rangeSlider = document.getElementById('rangeSlider');
+		
+		if (rangeSlider) {
+			var minVal = Number(rangeSlider.getAttribute('data-min'));
+			var maxVal = Number(rangeSlider.getAttribute('data-max'));
+			var startVal = Number(rangeSlider.getAttribute('data-start'));
+			var stopVal = Number(rangeSlider.getAttribute('data-stop'));
+			var input0 = document.getElementById('rangeSliderInput_0');
+			var input1 = document.getElementById('rangeSliderInput_1');
+			var inputs = [input0, input1];
+			
+			noUiSlider.create(rangeSlider, {
+				start: [startVal, stopVal],
+				connect: true,
+				format: wNumb({
+					decimals: 0
+				}),
+				range: {
+					'min': minVal,
+					'max': maxVal
+				}
+			});
 
-	noUiSlider.create(rangeSlider, {
-		start: [startVal, stopVal],
-		connect: true,
-		format: wNumb({
-			decimals: 0
-		}),
-		range: {
-			'min': minVal,
-			'max': maxVal
+			rangeSlider.noUiSlider.on('update', function (values, handle) {
+				inputs[handle].value = values[handle];
+			});
+
+			inputs.forEach(function (input, handle) {
+				input.addEventListener('input', function () {
+					rangeSlider.noUiSlider.setHandle(handle, this.value);
+				});
+			});	
 		}
-	});
-
-	rangeSlider.noUiSlider.on('update', function (values, handle) {
-		inputs[handle].value = values[handle];
-	});
-
-	inputs.forEach(function (input, handle) {
-		input.addEventListener('input', function () {
-			rangeSlider.noUiSlider.setHandle(handle, this.value);
-		});
-	});
+	}
+	noUiSliderInit();
 
 	// Показать еще в фильтрах
 	function showMoreFilters() {
@@ -965,5 +987,44 @@ $(document).ready(function () {
 		})
 	}
 	showMoreFilters();
+
+	// Очистить фильтр 
+	function clearFilter() {
+		let clearBnt = $('.filters__clear');
+		clearBnt.on('click', function () {
+			$(this).closest('.filters').find('input').prop('checked', false);
+		})
+	}
+	clearFilter();
+
+	// Изменение количества товара (плюс минус)
+	function counter(block) {
+		const counter = document.querySelector(block);
+		if (counter) {
+			const minus = counter.querySelector('.js-counter-minus');
+			const plus = counter.querySelector('.js-counter-plus');
+			const inputWrap = counter.querySelector('.js-counter-input');
+			const input = inputWrap.querySelector('input');
+			plus.addEventListener('click', () => {
+				if (Number(input.value) < 999) {
+					input.value = Number(input.value) + 1;
+				}
+			})
+			minus.addEventListener('click', () => {
+				if (Number(input.value) > 1) {
+					input.value = Number(input.value) - 1;
+				}
+			})
+			input.addEventListener('keyup', () => {
+				input.value = input.value.replace(/[^\d]/g, '');
+			})
+			input.addEventListener('blur', () => {
+				if (input.value == '' || input.value == 0) {
+					input.value = 1;
+				}
+			})
+		}
+	}
+	counter('#counter');
 
 });

@@ -86,6 +86,10 @@ body {
 }
 .content {
   flex-grow: 1;
+  padding-top: 136px;
+  @media (max-width: $break_md) {
+    padding-top: 70px;
+  }
 }
 .title {
   font-size: 24px;

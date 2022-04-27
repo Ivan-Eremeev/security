@@ -35,6 +35,30 @@
       padding: 20px;
     }
   }
+  &__clear {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: normal;
+    color: $gray;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+  
+    svg {
+      margin-right: 7px;
+      fill: $gray;
+      transition: 0.3s;
+    }
+  
+    &:hover {
+      color: $blue;
+  
+      svg {
+        fill: $blue;
+      }
+    }
+  }
   &__scroll {
     max-height: 200px;
     overflow-y: auto;
