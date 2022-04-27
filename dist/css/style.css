@@ -1853,6 +1853,9 @@ body.lock {
 .offers--mb90 {
   margin-bottom: 90px;
 }
+.offers--mb34 {
+  margin-bottom: 34px;
+}
 @media (min-width: 770px) {
   .offers__brand:hover {
     -webkit-box-shadow: 0px 2px 25px rgba(13, 36, 128, 0.15);
@@ -3328,7 +3331,7 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 60px;
+  width: 100px;
   height: 100%;
   cursor: pointer;
   -webkit-user-select: none;
@@ -3338,6 +3341,15 @@ body.lock {
   font-size: 30px;
   color: #A5A5AD;
 }
+.counter__btn svg {
+  fill: #A5A5AD;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.counter__btn:hover svg {
+  fill: #3460B4;
+}
 .counter__input {
   height: 100%;
   position: relative;
@@ -3345,7 +3357,7 @@ body.lock {
 .counter__input input {
   width: 100%;
   height: 100%;
-  padding-right: 53px;
+  padding-right: 36px;
   font-size: 14px;
   text-align: right;
   border: none;
@@ -3354,7 +3366,7 @@ body.lock {
 .counter__label {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 12px;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -3362,6 +3374,9 @@ body.lock {
   pointer-events: none;
 }
 
+.product-tabs {
+  margin-bottom: 132px;
+}
 .product-tabs__triggers {
   overflow-x: auto;
   border-bottom: 1px solid #C8D5EC;
