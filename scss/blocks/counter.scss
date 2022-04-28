@@ -26,6 +26,7 @@
     }
   }
   &__input {
+    width: 78px;
     height: 100%;
     position: relative;
     input {
@@ -45,5 +46,9 @@
     transform: translate(0,-50%);
     z-index: 2;
     pointer-events: none;
+  }
+  @media (max-width: $break_xs) {
+    justify-content: space-between;
+    width: 100%;
   }
 }

@@ -3092,11 +3092,15 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   max-width: 640px;
 }
 .product-screen__description {
-  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   max-width: 706px;
   margin-left: 30px;
 }
@@ -3139,8 +3143,8 @@ body.lock {
   -o-transition: 0.1s;
   transition: 0.1s;
 }
-.product-screen__img-nav:hover {
-  border-color: #3460B4;
+.product-screen__img-nav img {
+  max-height: 100%;
 }
 .product-screen__img-full {
   text-align: center;
@@ -3310,6 +3314,79 @@ body.lock {
 .product-screen__text strong {
   font-weight: bold;
 }
+@media (max-width: 1200px) {
+  .product-screen__slider {
+    max-width: 500px;
+  }
+  .product-screen__slider-nav {
+    width: 60px;
+  }
+  .product-screen__slider-nav-container {
+    height: 370px;
+  }
+}
+@media (max-width: 1050px) {
+  .product-screen__slider {
+    max-width: 380px;
+  }
+  .product-screen__slider-nav {
+    padding-top: 0;
+  }
+}
+@media (min-width: 770px) {
+  .product-screen__img-nav:hover {
+    border-color: #3460B4;
+  }
+}
+@media (max-width: 769px) {
+  .product-screen__row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product-screen__slider {
+    width: 100%;
+    max-width: none;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product-screen__slider-nav {
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .product-screen__slider-nav-container {
+    height: auto;
+  }
+  .product-screen__slider-main {
+    margin-bottom: 20px;
+  }
+  .product-screen__description {
+    margin-left: 0;
+    max-width: none;
+  }
+}
+@media (max-width: 500px) {
+  .product-screen__btn-block {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product-screen__btn-block .btn {
+    width: 100%;
+    height: 53px;
+    margin-top: 30px;
+  }
+  .product-screen__delivery {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product-screen__delivery .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 
 .counter {
   display: -webkit-box;
@@ -3351,6 +3428,7 @@ body.lock {
   fill: #3460B4;
 }
 .counter__input {
+  width: 78px;
   height: 100%;
   position: relative;
 }
@@ -3372,6 +3450,14 @@ body.lock {
   transform: translate(0, -50%);
   z-index: 2;
   pointer-events: none;
+}
+@media (max-width: 500px) {
+  .counter {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .product-tabs {
@@ -3470,10 +3556,12 @@ body.lock {
   margin-top: -30px;
   margin-left: -30px;
 }
+.product-tabs__certificate__col {
+  padding-top: 30px;
+  padding-left: 30px;
+}
 .product-tabs__certificate {
   padding: 15px 15px 20px;
-  margin-top: 30px;
-  margin-left: 30px;
   border: 1px solid #EFF3F9;
 }
 .product-tabs__certificates-img {
@@ -3486,7 +3574,7 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 114px;
+  max-width: 114px;
   height: 160px;
   margin-bottom: 11px;
 }
@@ -3518,6 +3606,16 @@ body.lock {
 .product-tabs__docs-col {
   width: 33.3333333333%;
 }
+@media screen and (max-width: 1050px) {
+  .product-tabs__docs-col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-tabs__docs-col {
+    width: 100%;
+  }
+}
 .product-tabs__doc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3527,6 +3625,8 @@ body.lock {
 }
 .product-tabs__doc-image {
   margin-right: 15px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .product-tabs__doc-title {
   font-weight: 500;
@@ -3547,4 +3647,26 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media (max-width: 500px) {
+  .product-tabs__tables-row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .product-tabs__table {
+    max-width: none;
+  }
+  .product-tabs__certificate__col {
+    width: 50%;
+  }
+  .product-tabs__certificates-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-tabs__triggers ul {
+    margin-left: -15px;
+  }
+  .product-tabs__triggers ul li {
+    margin-left: 15px;
+  }
 }

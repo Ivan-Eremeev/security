@@ -910,11 +910,20 @@ $(document).ready(function () {
 
 	var productSliderNav = new Swiper("#productSliderNav", {
 		spaceBetween: 12,
-		slidesPerView: 5,
+		slidesPerView: 3,
 		freeMode: true,
-		direction: "vertical",
+		direction: "horizontal",
 		watchSlidesProgress: true,
 		grabCursor: true,
+		breakpoints: {
+			500: {
+				slidesPerView: 5,
+			},
+			769: {
+				direction: 'vertical',
+				slidesPerView: 5,
+			},
+		}
 	});
 	var productSliderMain = new Swiper("#productSliderMain", {
 		spaceBetween: 10,
