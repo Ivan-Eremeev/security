@@ -1008,32 +1008,35 @@ $(document).ready(function () {
 
 	// Изменение количества товара (плюс минус)
 	function counter(block) {
-		const counter = document.querySelector(block);
+		const counter = document.querySelectorAll(block);
+		console.log(counter);
 		if (counter) {
-			const minus = counter.querySelector('.js-counter-minus');
-			const plus = counter.querySelector('.js-counter-plus');
-			const inputWrap = counter.querySelector('.js-counter-input');
-			const input = inputWrap.querySelector('input');
-			plus.addEventListener('click', () => {
-				if (Number(input.value) < 999) {
-					input.value = Number(input.value) + 1;
-				}
-			})
-			minus.addEventListener('click', () => {
-				if (Number(input.value) > 1) {
-					input.value = Number(input.value) - 1;
-				}
-			})
-			input.addEventListener('keyup', () => {
-				input.value = input.value.replace(/[^\d]/g, '');
-			})
-			input.addEventListener('blur', () => {
-				if (input.value == '' || input.value == 0) {
-					input.value = 1;
-				}
-			})
+			counter.forEach(element => {
+				const minus = element.querySelector('.js-counter-minus');
+				const plus = element.querySelector('.js-counter-plus');
+				const inputWrap = element.querySelector('.js-counter-input');
+				const input = inputWrap.querySelector('input');
+				plus.addEventListener('click', () => {
+					if (Number(input.value) < 999) {
+						input.value = Number(input.value) + 1;
+					}
+				})
+				minus.addEventListener('click', () => {
+					if (Number(input.value) > 1) {
+						input.value = Number(input.value) - 1;
+					}
+				})
+				input.addEventListener('keyup', () => {
+					input.value = input.value.replace(/[^\d]/g, '');
+				})
+				input.addEventListener('blur', () => {
+					if (input.value == '' || input.value == 0) {
+						input.value = 1;
+					}
+				})
+			});
 		}
 	}
-	counter('#counter');
+	counter('.js-counter');
 
 });

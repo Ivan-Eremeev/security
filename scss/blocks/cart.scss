@@ -1,0 +1,247 @@
+.cart {
+  margin-bottom: 40px;
+  .title {
+    margin-bottom: 32px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__items {
+    max-width: 970px;
+    flex-grow: 1;
+  }
+  &__counter {
+    display: flex;
+    flex-shrink: 0;
+    width: 120px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E1E4EF;
+    border-radius: 6px;
+  }
+  &__counter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    cursor: pointer;
+    user-select: none;
+    svg {
+      fill: $gray;
+    }
+    &:hover {
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+  &__counter-input {
+    position: relative;
+    input {
+      width: 100%;
+      height: 100%;
+      padding-right: 33px;
+      text-align: right;
+      border: none;
+      outline: none;
+    }
+  }
+  &__counter-label {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translate(0,-50%);
+    pointer-events: none;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 130px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EBEFF7;
+    position: relative;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  &__item-left {
+    display: flex;
+    align-items: center;
+  }
+  &__item-right {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+  &__item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__item-head {
+    
+  }
+  &__item-name {
+    font-size: 13px;
+    color: $gray;
+    margin-bottom: 6px;
+  }
+  &__item-title {
+    font-weight: bold;
+    a {
+      color: $black;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &__item-price {
+    width: 90px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    span {
+      display: block;
+      font-size: 15px;
+      font-weight: normal;
+      color: $gray;
+    }
+  }
+  &__item-icons {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+  }
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    width: 24px;
+    height: 24px;
+    transition: 0.1s;
+    cursor: pointer;
+    user-select: none;
+    svg {
+      opacity: 0.3;
+    }
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  &__block-container {
+    width: 320px;
+    margin-left: 30px;
+  }
+  &__block {
+    padding: 25px 20px 22px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 25px rgba(13, 36, 128, 0.15);
+    border-radius: 6px;
+    .btn {
+      width: 100%;
+      padding: 14px 30px;
+      font-size: 18px;
+    }
+  }
+  &__block-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    span {
+      display: block;
+      margin-top: 3px;
+      font-size: 14px;
+      color: $gray;
+      font-weight: normal;
+    }
+  }
+  &__block-list {
+    font-size: 14px;
+    margin-bottom: 1px;
+    ul {
+      max-width: 145px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+        span {
+          color: $gray;
+        }
+      }
+    }
+  }
+  &__block-text {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 19px;
+  }
+  &__block-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    span {
+      font-size: 24px;
+      margin-left: 50px;
+    }
+  }
+  &__block-promo {
+    font-size: 14px;
+    color: $blue;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 28px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @media (max-width: $break_md) {
+    &__items {
+      max-width: none;
+    }
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__block-container {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__item {
+      flex-wrap: wrap;
+      padding-right: 50px;
+    }
+    &__item-right {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+    &__item-icons {
+      display: block;
+      top: 30px;
+      right: 10px;
+      transform: translate(0,0);
+    }
+    &__item-icon {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
