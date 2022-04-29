@@ -1009,7 +1009,6 @@ $(document).ready(function () {
 	// Изменение количества товара (плюс минус)
 	function counter(block) {
 		const counter = document.querySelectorAll(block);
-		console.log(counter);
 		if (counter) {
 			counter.forEach(element => {
 				const minus = element.querySelector('.js-counter-minus');
@@ -1038,5 +1037,17 @@ $(document).ready(function () {
 		}
 	}
 	counter('.js-counter');
+
+	// Маркировка нумерованных списков в текстовом блоке
+	function olListStyleType() {
+		const textBlock = $('.text-block');
+		const olList = textBlock.find('ol');
+		olList.each( function () {
+			$(this).find('li').each(function (index) {
+				$(this).append('<span>' + (index + 1) + '.' + '</span>');
+			})
+		})
+	}
+	olListStyleType();
 
 });
