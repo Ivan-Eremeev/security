@@ -154,8 +154,10 @@
     }
   }
   &__radio {
+    display: block;
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
     margin-right: 9px;
     border: 2px solid #E1E4EF;
     border-radius: 100%;

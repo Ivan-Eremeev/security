@@ -255,6 +255,29 @@ block content
 								.input 
 									.input__label Комментарий к заказу
 									textarea(placeholder="Введите комментарий к заказу")
+
+					.cart-form__block 
+						.cart-form__title Способ оплаты
+						.cart-form__pay 
+							.row.gy
+								.cart-form__pay-item 
+									input#pay_cash(type="radio", name="pay")
+									label(for="pay_cash") 
+										span.filters__radio
+										span.cart-form__pay-title Наличными
+										span.cart-form__pay-text Оплата наличными или картой при получении товара.
+								.cart-form__pay-item 
+									input#pay_cashless(type="radio", name="pay")
+									label(for="pay_cashless") 
+										span.filters__radio
+										span.cart-form__pay-title Безналичная оплата от юридического лица
+										span.cart-form__pay-text Для удобства укажите Ваш ИНН в комментарии
+
+					.cart-form__block 
+						.cart-form__result 
+							.cart-form__result-price Итого 
+								span 52 999 &#8381;
+							.btn.btn--blue Оформить заказ
 			//	/cart-form
 			
 		include blocks/footer.pug

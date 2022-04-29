@@ -1,0 +1,128 @@
+extends blocks/base.pug
+
+block title 
+	title Статьи
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			// breadcrumbs
+			.breadcrumbs
+				.wrapper 
+					ul 
+						li 
+							a(href="#") Главная
+						li Статьи
+			//	/breadcrumbs
+
+			// articles
+			.articles
+				.wrapper 
+					.title Статьи
+					.row 
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_5.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_2.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_1.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_3.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_4.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_6.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_7.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_8.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+						.articles__col 
+							a(href="#").articles__item 
+								.articles__img 
+									img(src="img/news_9.jpg", alt="")
+								.articles__date 15 марта 2022
+								.articles__title 
+									span Выбор и установка шлагбаума
+								.articles__text Статья о том, что нужно знать при выборе и установке автоматических шлагбаумов. Описание некоторых параметров. Обзор дополнительного оборудования...
+
+					.catalog-page__more 
+						.btn.btn--gray-blue Показать еще 20 товаров
+
+					.catalog-page__pagination 
+						ul 
+							li 
+								a(href="#").disabled 
+									<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.74453 0.95202C4.54104 0.951912 4.33756 1.02988 4.18255 1.18559L0.381835 5.00968C0.0752974 5.31814 0.0752974 5.81611 0.381835 6.12468L4.18255 9.94866C4.49065 10.2587 4.9921 10.2604 5.30248 9.95257C5.61286 9.64464 5.61462 9.1437 5.30615 8.83366L2.05955 5.56712L5.30615 2.3007C5.61462 1.99066 5.61286 1.48961 5.30248 1.18178C5.14782 1.02851 4.94608 0.95202 4.74453 0.95202Z" fill="#3460B4"/>
+									</svg>
+							li 
+								a(href="#").active 1
+							li 
+								a(href="#") 2
+							li 
+								a(href="#") 3
+							li 
+								a(href="#") 4
+							li 
+								a(href="#") 5
+							li 
+								a(href="#") 
+									<svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M1.25547 10.0479C1.45896 10.048 1.66244 9.97 1.81745 9.81429L5.61817 5.9902C5.9247 5.68174 5.9247 5.18377 5.61817 4.8752L1.81745 1.05122C1.50935 0.741174 1.0079 0.739482 0.697519 1.04731C0.387135 1.35524 0.385382 1.85618 0.693847 2.16622L3.94045 5.43275L0.693847 8.69918C0.385382 9.00922 0.387135 9.51027 0.697519 9.81809C0.852183 9.97137 1.05392 10.0479 1.25547 10.0479Z" fill="#3460B4"/>
+									</svg>
+			//	/articles
+			
+		include blocks/footer.pug
