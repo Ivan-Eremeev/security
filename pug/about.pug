@@ -1,0 +1,59 @@
+extends blocks/base.pug
+
+block title 
+	title О компании
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			// breadcrumbs
+			.breadcrumbs
+				.wrapper 
+					ul 
+						li 
+							a(href="#") Главная
+						li О компании
+			// /breadcrumbs
+
+			// about
+			.about
+				.wrapper 
+					.about__text
+						h1 О компании 1-Security
+						p Компания “1-Security”, дистрибьютор систем безопасности отечественных и зарубежных производителей. Мы работаем напрямую с поставщиками, что позволяет нам удерживать низкую цену и маленькие сроки. Мы оказываем весь спектр сервисных услуг: доставка, гарантийное и сервисное обслуживание.
+						p За время существования мы зарекомендовали себя как добросовестный поставщик и надежный клиент. Поэтому приглашаем к сотрудничеству фирмы производители, дистрибьюторы и сервисные компании.
+			//	/about
+
+			// services
+			.services
+				.wrapper 
+					.title Направления нашей деятельности
+					.row 
+						.services__col 
+							a(href="#").services__item 
+								.services__title Поставки оборудования
+								.services__img 
+									img(src="img/news_6.jpg", alt="")
+						.services__col 
+							a(href="#").services__item 
+								.services__title Монтаж систем безопасности
+								.services__img 
+									img(src="img/news_7.jpg", alt="")
+						.services__col 
+							a(href="#").services__item 
+								.services__title Проектирование систем безопасности
+								.services__img 
+									img(src="img/news_8.jpg", alt="")
+						.services__col 
+							a(href="#").services__item 
+								.services__title Обслуживание систем безопасности
+								.services__img 
+									img(src="img/news_9.jpg", alt="")
+			//	/services
+			
+		include blocks/footer.pug
