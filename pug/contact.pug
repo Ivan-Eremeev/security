@@ -1,0 +1,97 @@
+extends blocks/base.pug
+
+block title 
+	title Контакты
+
+block content
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+
+			// breadcrumbs
+			.breadcrumbs
+				.wrapper 
+					ul 
+						li 
+							a(href="#") Главная
+						li Контакты
+			// /breadcrumbs
+
+			// contact
+			.contact
+				.wrapper 
+
+					.title Контакты
+
+					.contact__items 
+						.row.gy
+							.contact__col 
+								.contact__item 
+									.contact__name 
+										img(src="img/phone.svg", alt="")
+										| Телефон
+									.contact__text 
+										a(href="tel:+74951281193") +7(495) 128-11-93
+							.contact__col 
+								.contact__item 
+									.contact__name 
+										img(src="img/email.svg", alt="")
+										| E-mail
+									.contact__text 
+										a(href="mailto:info@1-security.ru") info@1-security.ru
+							.contact__col 
+								.contact__item 
+									.contact__name 
+										img(src="img/time.svg", alt="")
+										| Время работы
+									.contact__text 
+										p ПН - ПТ: 9:00 - 18:00
+										p СБ - ВС: Выходной
+							.contact__col 
+								.contact__item 
+									.contact__name 
+										img(src="img/map.svg", alt="")
+										| Адрес
+									.contact__text 
+										p г. Москва, бульвар Энтузиастов, 2 
+										p БЦ "Голден Гейт", офис 1115
+
+					.contact__map#map(data-coord="[55.74648156898261, 37.68261949999996]")
+			//	/contact
+
+			// callback
+			.callback
+				.wrapper 
+					.callback__container
+						.callback__title Задать вопрос
+						form(action="#").callback__form 
+							.row 
+								.callback__col-half 
+									.input 
+										.input__label Имя
+										input(type="text" placeholder="Введите имя")
+								.callback__col-half 
+									.input 
+										.input__label E-mail
+										input(type="text" placeholder="Введите e-mail")
+								.callback__col
+									.input 
+										.input__label Сообщение 
+										textarea(placeholder="Введите сообщение")
+								.callback__col 
+									.btn.btn--blue Отправить
+								.callback__col 
+									.callback__approval 
+										input#approval(type="checkbox" checked)
+										label(for="approval") 
+											span.callback__checkbox 
+												<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.641 1.071L11.299 0.729426C10.9236 0.353212 10.3085 0.353212 9.93188 0.729426L4.12584 6.53625L2.06563 4.47683C1.69021 4.10102 1.07473 4.10102 0.699313 4.47723L0.357735 4.81841C-0.0176825 5.19423 -0.0176825 5.80931 0.357735 6.18512L3.4407 9.27127C3.81651 9.64669 4.43159 9.64669 4.80741 9.27127L11.641 2.43771C12.016 2.0619 12.016 1.44682 11.641 1.071Z" fill="#3460B4"/>
+												</svg>
+											| Я согласен с политикой конфиденциальности и обработки персональных данных
+			//	/callback
+			
+		include blocks/footer.pug

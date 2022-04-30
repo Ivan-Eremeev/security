@@ -18,7 +18,7 @@ $(document).ready(function () {
 	// libs-settings/fullpage_settings.js
 	// libs-settings/tinyscrollbar-settings.js
 	// libs-settings/tooltipster-settings.js
-	// libs-settings/yandex-map-settings.js
+	//= libs-settings/yandex-map-settings.js
 	// libs-settings/google-map-settings.js
 	// mailto-ajax.js
 
