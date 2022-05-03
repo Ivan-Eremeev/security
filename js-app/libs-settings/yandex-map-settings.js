@@ -22,7 +22,7 @@ function map() {
       // Метка со своим изображением, балуном и хинтом
       var myPlacemark = new ymaps.Placemark(coord, null, {
         iconLayout: 'default#image',
-        iconImageHref: "../img/placemark.svg",
+        iconImageHref: 'img/placemark.svg',
         iconImageSize: [32, 42],
         iconImageOffset: [-15, -44]
       });
@@ -30,7 +30,6 @@ function map() {
       .add(myPlacemark);
       // myPlacemark.balloon.open(); // Открыть балун метки
       myMap.behaviors.disable('scrollZoom'); // Отключить изменение масштаба скроллом мыши
-      myMap.behaviors.disable('drag'); // Отключить перетаскивание карты тачем
     }
   }
 }
