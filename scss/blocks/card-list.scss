@@ -95,6 +95,9 @@
       }
     }
   }
+  &__counter {
+    margin-bottom: 19px;
+  }
   @media (max-width: $break_sm) {
     grid-template-columns: 20% auto auto;
     grid-template-areas:
@@ -108,7 +111,7 @@
     &__controlls {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       margin-top: 10px;
     }
@@ -117,6 +120,9 @@
     }
     &__parameters {
       padding-right: 0;
+    }
+    &__counter {
+      margin-top: 10px;
     }
   }
   @media (max-width: $break_xs) {

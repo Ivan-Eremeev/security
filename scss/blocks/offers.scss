@@ -23,6 +23,7 @@
       position: absolute;
       top: 7px;
       right: 0;
+      transition: 0.3s;
     }
     &:hover {
       opacity: 0.7;
@@ -97,6 +98,15 @@
       &:hover {
         box-shadow: 0px 2px 25px rgba(13, 36, 128, 0.15);
         border-color: transparent;
+      }
+    }
+    .row {
+      &:hover {
+        .offers__more {
+          &:after {
+            transform: translate(10px, 0);
+          }
+        }
       }
     }
   }
